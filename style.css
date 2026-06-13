@@ -10,7 +10,7 @@ body {
   /* Добавил запасной шрифт */
 }
 
-button:hover {
+.cart-text__button:hover {
   background-color: #fff;
   color: #050505;
 }
@@ -18,8 +18,7 @@ button:hover {
 .container {
    position: absolute;
   width: 1440px;
-  height: 800px;
-  margin-left: 0px;
+   margin-left: 0px;
   margin-right: 0px;
   background: #E1FF8F;
 }
@@ -30,11 +29,11 @@ button:hover {
   background: rgba(225, 255, 143, 1);
   display: flex;
   flex-direction: row-reverse;
-  height: 800px;
+  height: 710px;
   /* Высота задана вами */
 }
 
-.container__vector {
+.cart__vector {
  position: absolute;
   width: 413px;
   height: 528px;
@@ -44,14 +43,14 @@ button:hover {
   border-width: 1px;
 }
 
-.container__Start4 {
+.cart__Start-4 {
   box-sizing: border-box;
   position: absolute;
   left: 1013px;
   top: 568px;
 }
 
-.container__vector-4780 {
+.cart__vector-4780 {
   position: absolute;
   width: 317px;
   height: 163px;
@@ -59,14 +58,14 @@ button:hover {
   top: -10px;
 }
 
-.container__Start5 {
+.cart__Start-5 {
   box-sizing: border-box;
   position: absolute;
   left: 948px;
   top: 538px;
 }
 
-.container__vector-4781 {
+.cart__vector-4781 {
   position: absolute;
   width: 142px;
   height: 179px;
@@ -74,29 +73,29 @@ button:hover {
   top: 225px;
 }
 
-.container__Start3 {
+.cart__Start-3 {
   box-sizing: border-box;
   position: absolute;
   left: 123px;
   top: 69px;
 }
 
-.container__vector-4782 {
+.cart__vector-4782 {
   position: absolute;
   width: 219.88px;
   height: 418px;
-  left: 1225px;
+  left: 1220px;
   top: 369px;
 }
 
-.container__Start2 {
+.cart__Start-2 {
   box-sizing: border-box;
   position: absolute;
   left: 63px;
   top: 94px;
 }
 
-.container__vector-4788 {
+.cart__vector-4788 {
   position: absolute;
   width: 80px;
   height: 126px;
@@ -105,7 +104,7 @@ button:hover {
 
 }
 
-.container__vector-4791 {
+.cart__vector-4791 {
   position: absolute;
   width: 34px;
   height: 124px;
@@ -158,6 +157,7 @@ button:hover {
 }
 
 .cart-text__button {
+  text-decoration: none;
   font-family: Montserrat, Arial;
   color: #fff;
   width: 247px;
@@ -168,8 +168,6 @@ button:hover {
   font-size: 24px;
   line-height: 142%;
   text-align: center;
-  border: 1px solid currentColor;
-  /* Более современный способ задания рамки */
   padding-top: 16px;
   padding-right: 28px;
   padding-bottom: 16px;
@@ -203,7 +201,7 @@ span {
 
 .lenta-content {
   display: flex;
-  gap: 20px;
+  gap: 51px;
   font-weight: 700;
   font-style: Bold;
   font-size: 30px;
@@ -233,7 +231,7 @@ span {
   /* 25s - скорость прокрутки. Чем больше число, тем медленнее. */
 }
 
-.lenta-content__item_1 {
+.lenta-content__item-1 {
   /* Викторина */
   height: 33px;
    font-style: normal;
@@ -261,10 +259,9 @@ span {
 }
 
 
-.lenta-content__item_2 {
+.lenta-content__item-2 {
   height: 33px;
- 
-  font-style: normal;
+   font-style: normal;
   font-weight: 700;
   font-size: 30px;
   line-height: 110%;
@@ -279,7 +276,7 @@ span {
 
 }
 
-.lenta-content__Start1 {
+.lenta-content__Start-1 {
   width: 36px;
   height: 36px;
   flex: none;
@@ -287,7 +284,7 @@ span {
   flex-grow: 0;
 }
 
-.lenta-content__item_3 {
+.lenta-content__item-3 {
   /* Переверни текст */
   height: 33px;
    font-style: normal;
@@ -305,7 +302,7 @@ span {
   flex-grow: 0;
 }
 
-.lenta-content__Start2 {
+.lenta-content__Start-2 {
   width: 36px;
   height: 36px;
   flex: none;
@@ -313,7 +310,7 @@ span {
   flex-grow: 0;
 }
 
-.lenta-content__item_4 {
+.lenta-content__item-4 {
   height: 32px;
   /* Простая арифметика */
    font-style: normal;
@@ -331,7 +328,7 @@ span {
 
 }
 
-.lenta-content__Start3 {
+.lenta-content__Start-3 {
   width: 36px;
   height: 36px;
   flex: none;
@@ -340,7 +337,7 @@ span {
 
 }
 
-.lenta-content__item_5 {
+.lenta-content__item-5 {
   /* Камень, ножницы, бумага */
   height: 33px;
   font-family: 'Montserrat';
@@ -359,7 +356,7 @@ span {
 
 }
 
-.lenta-content__Start4 {
+.lenta-content__Start-4 {
   width: 36px;
   height: 36px;
   flex: none;
@@ -368,13 +365,12 @@ span {
 
 }
 
-.lenta-content__item_6 {
+.lenta-content__item-6 {
    font-style: normal;
   font-weight: 700;
   font-size: 30px;
   line-height: 110%;
-  display: flex;
-  align-items: center;
+    align-items: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #202027;
@@ -382,10 +378,10 @@ span {
   order: 10;
   flex-grow: 0;
   width: 588px;
-  height: 32px;
+  height: 33px;
 }
 
-.lenta-content__Start5 {
+.lenta-content__Start-5 {
   width: 36px;
   height: 36px;
   flex: none;
@@ -395,24 +391,23 @@ span {
 }
 
 .bloc {
-  height: 1242px;
-  left: 0px;
-  top: 0px;
   background: #202027;
 }
 
-.bloc__Start6 {
-  padding-top: 94px;
+.bloc__Start-6 {
+  overflow: hidden;
+  /* Скрываем все, что выходит за пределы контейнера */
+  padding-top: 40px;
   box-sizing: border-box;
   position: absolute;
   width: 584.72px;
   height: 584.72px;
-  left: 1000px;
+  left: 906px;
   top: 877px;
-  transform: rotate(-6.77deg);
+  transform: rotate(358deg);
 
 }
-.bloc__Start11{
+.bloc__Start-11{
 box-sizing: border-box;
 position: absolute;
 width: 31.34px;
@@ -422,7 +417,7 @@ top: 1630px;
 transform: rotate(5.45deg);
 
 }
-.bloc__Start12 {
+.bloc__Start-12 {
   box-sizing: border-box;
   position: absolute;
   width: 54.6px;
@@ -469,16 +464,16 @@ transform: rotate(5.45deg);
 
 }
 
-.card {
+.card-bloc {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   /* Три одинаковые колонки */
   gap: 32px;
   /* Расстояние между карточками */
 
-}
+ }
 
-.bloc-card {
+.card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -486,13 +481,15 @@ transform: rotate(5.45deg);
   flex: none;
   order: 0;
   flex-grow: 0;
-
 }
-.bloc-card_2{
+
+
+.card--one,
+.card--two {
   z-index: 1000;
 }
 
-.bloc-card_3 {
+.card--three{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -506,7 +503,7 @@ transform: rotate(5.45deg);
 
 }
 
-.bloc-card_4 {
+.card--four {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -523,7 +520,7 @@ transform: rotate(5.45deg);
   transform: translateY(-40px);
 }
 
-.bloc__igra_img {
+.card__img {
   width: 378px;
   height: 314px;
   background-image: url('./img/igra_1.jpg');
@@ -535,7 +532,7 @@ transform: rotate(5.45deg);
   flex-grow: 0;
 }
 
-.bloc__igra_img_1 {
+.card__img1 {
   width: 378px;
   height: 314px;
   background-image: url('./img/igra_2.jpg');
@@ -548,7 +545,7 @@ transform: rotate(5.45deg);
 
 }
 
-.bloc__igra_img_2 {
+.card__img2 {
   width: 378px;
   height: 314px;
   background-image: url('./img/igra_3.jpg');
@@ -561,7 +558,7 @@ transform: rotate(5.45deg);
 
 }
 
-.bloc__igra_img_3 {
+.card__img3 {
   width: 378px;
   height: 314px;
   background-image: url('./img/igra_4.jpg');
@@ -574,7 +571,7 @@ transform: rotate(5.45deg);
 
 }
 
-.bloc__igra_img_4 {
+.card__img4 {
   width: 378px;
   height: 314px;
   background-image: url('./img/igra_5.jpg');
@@ -587,7 +584,7 @@ transform: rotate(5.45deg);
 
 }
 
-.bloc__igra_img_5 {
+.card__img5 {
   width: 378px;
   height: 314px;
   background-image: url('./img/igra_6.jpg');
@@ -599,9 +596,11 @@ transform: rotate(5.45deg);
   flex-grow: 0;
 
 }
-
-.bloc-text,
-.bloc-text_2 {
+.card__igra card__igra1{
+  text-decoration: none; 
+}
+.card__text,
+.card__text--two {
   background: white;
   display: flex;
   flex-direction: column;
@@ -614,8 +613,8 @@ transform: rotate(5.45deg);
   border-bottom-right-radius: 30px;
 }
 
-.bloc-text_1,
-.bloc-text_4 {
+.card__text--one,
+.card__text--four {
   background: white;
   display: flex;
   flex-direction: column;
@@ -628,7 +627,7 @@ transform: rotate(5.45deg);
   border-bottom-right-radius: 30px;
 }
 
-.bloc-text_3 {
+.card__text--three {
   background: white;
   display: flex;
   flex-direction: column;
@@ -641,7 +640,7 @@ transform: rotate(5.45deg);
   border-bottom-right-radius: 30px;
 }
 
-.bloc-text_5 {
+.card__text--five{
   background: white;
   display: flex;
   flex-direction: column;
@@ -655,14 +654,14 @@ transform: rotate(5.45deg);
 
 }
 
-.bloc-text__name,
-.bloc-text__name_1,
-.bloc-text__name_2,
-.bloc-text__name_3,
-.bloc-text__name_4,
-.bloc-text__name_5 {
-  font-style: normal;
-  font-weight: 500;
+.card__name,
+.card__name1,
+.card__name2,
+.card__name3,
+.card__name4,
+.card__name5 {
+ text-decoration: none;
+  font-style: normal;ont-weight: 500;
   font-size: 16px;
   line-height: 110%;
   display: flex;
@@ -681,7 +680,7 @@ transform: rotate(5.45deg);
   flex-grow: 0;
 }
 
-.bloc-text__soft {
+.card__soft {
   text-decoration: none;
   width: 314px;
   height: 39px;
@@ -700,7 +699,7 @@ transform: rotate(5.45deg);
 
 }
 
-.bloc-text__soft_1 {
+.card__soft1 {
   text-decoration: none;
   width: 314px;
   height: 39px;
@@ -718,7 +717,7 @@ transform: rotate(5.45deg);
 
 }
 
-.bloc-text__soft_2 {
+.card__soft2 {
    width: 314px;
   height: 39px;
   font-style: normal;
@@ -736,7 +735,7 @@ transform: rotate(5.45deg);
 
 }
 
-.bloc-text__soft_3 {
+.card__soft3 {
   width: 314px;
   height: 117px;
   font-style: normal;
@@ -753,7 +752,7 @@ transform: rotate(5.45deg);
 
 }
 
-.bloc-text__soft_4 {
+.card__soft4 {
    width: 314px;
   height: 78px;
   font-family: 'Montserrat';
@@ -771,7 +770,7 @@ transform: rotate(5.45deg);
 
 }
 
-.bloc-text__soft_5 {
+.card__soft5 {
   width: 314px;
   height: 117px;
   font-family: 'Montserrat';
