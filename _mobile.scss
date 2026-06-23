@@ -1,0 +1,129 @@
+/* Стили для экранов с шириной до 767 пикселей */
+@media (max-width: 767px) {
+    /* Этот код сработает только на мобильных устройствах */
+    .cart {
+
+        width: 376px;
+    }
+
+    .container {
+        max-width: 100%;
+        /* Занимает всю доступную ширину */
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 16px;
+        padding-right: 16px;
+        /* height: 700px; */
+        /* Рекомендуется убрать или заменить на min-height */
+
+    }
+/*.cart__vector-4780,
+.cart__vector-4781,
+.cart__vector-4782,
+.cart__vector-4788,
+.cart__vector-4791{
+    display: none;
+}
+    /* Текст корзины */
+    .cart-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 36px;
+        width: 100%;
+        /* Растягивается на весь контейнер */
+        padding: 0;
+    }
+
+    /* Заголовок H1 внутри текста корзины */
+    .cart-text h1 {
+        width: 100%;
+        font-size: 24px;
+        /* Уменьшен размер шрифта для мобилки */
+        line-height: 1.4em;
+        text-align: center;
+        margin: 0;
+    }
+
+    /* Параграф внутри текста корзины */
+    .cart-text p {
+        width: 100%;
+        font-size: 14px;
+        line-height: 1.6em;
+        text-align: center;
+        margin: 0;
+    }
+
+    /* Кнопка: растянута на всю ширину родителя */
+    .cart-text__button {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        /* Ключевое изменение */
+        max-width: 343px;
+        /* Ограничение максимальной ширины для красоты */
+        margin: 0 auto;
+        /* Центрирует кнопку относительно родителя */
+        padding: 16px 28px;
+        border-radius: 60px;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+    }
+/* Это правило найдет элемент с классом 'bloc' и скроет его */
+
+
+/*.mini-bloc {
+    display: none;
+}
+.bloc-catalog {
+    display: none;
+}*/
+ .card-bloc {
+    position: static;
+        background: #202027;
+        padding: 40px 20px;
+        margin-top: 20px;
+ .card {
+    flex-direction: column; /* Вертикальное расположение элементов */
+    align-items: stretch; /* Чтобы картинка и текст занимали всю ширину */
+    height: auto; /* Высота карточки подстраивается под контент */
+ }
+ /* 3. Стили для изображения внутри карточки */
+ .card__img,
+ .card__img1,
+ .card__img2,
+ .card__img3,
+ .card__img4,
+ .card__img5 {
+     width: 100%; /* Картинка занимает всю ширину карточки */
+     height: auto; /* Высота подстраивается, чтобы сохранить пропорции */
+     border-radius: 30px 30px 0 0; /* Скругляем только верхние углы */
+     object-fit: cover; /* Изображение будет масштабироваться без искажений */
+ }
+
+ /* 4. Стили для текстового блока внутри карточки */
+ .card__text,
+ .card__text--one,
+ .card__text--two,
+ .card__text--three,
+ .card__text--four,
+ .card__text--five {
+     width: 100%; /* Текстовый блок занимает всю ширину карточки */
+     padding: 24px; /* Уменьшаем внутренние отступы для мобайла */
+     border-radius: 0 0 30px 30px; /* Скругляем только нижние углы */
+ }
+
+    .lenta {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 100%;
+        /* Не вылезать за края экрана */
+        padding: 16px 24px;
+
+    }
+}

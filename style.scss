@@ -32,7 +32,6 @@ body {
   height: 710px;
   /* Высота задана вами */
 }
-
 .container {
   position: absolute;
   width: 100%;
@@ -44,7 +43,6 @@ body {
   padding-right: 15px;
   background: #E1FF8F;
 }
-
 .cart__vector {
   position: absolute;
   width: 413px;
@@ -1101,106 +1099,4 @@ span {
     /* Конечная позиция - сдвинут влево на свою ширину */
   }
 }
-/* Стили для экранов с шириной до 767 пикселей */
-@media (max-width: 767px) {
-  /* --- ОСНОВНОЙ КОНТЕЙНЕР И КОРЗИНА --- */
-  .cart {
-    flex-direction: column; /* Делаем элементы вертикальными */
-    height: auto; /* Высота зависит от контента */
-    padding-bottom: 40px; /* Отступ перед следующим блоком */
-  }
-  /* --- ТЕКСТ КОРЗИНЫ --- */
-  .cart-text {
-    position: static; /* Возвращаем в поток */
-    width: 90%;
-    max-width: 500px;
-    margin: 40px auto; /* Центрируем и добавляем отступ сверху */
-    text-align: center;
-  }
-  .cart-text h1 {
-    font-size: clamp(32px, 8vw, 48px);
-    line-height: 1.2;
-    white-space: normal;
-    height: auto;
-  }
-  .cart-text p {
-    font-size: clamp(14px, 4vw, 18px);
-    line-height: 1.6;
-    height: auto;
-  }
-  .cart-text__button {
-    width: 100%;
-    max-width: 300px;
-    margin: 20px auto;
-  }
-  /* --- СКРЫВАЕМ НЕНУЖНЫЕ ДЕКОРАЦИИ --- */
-  .cart__vector-4780,
-  .cart__vector-4781,
-  .cart__vector-4782,
-  .cart__vector-4788,
-  .cart__vector-4791 {
-    display: none;
-  }
-  /* --- БЛОК С КАТАЛОГОМ ИГР --- */
-  .bloc-catalog {
-    position: static;
-    background: #202027;
-    padding: 40px 20px;
-    margin-top: 20px;
-  }
-  .bloc-name {
-    font-size: clamp(32px, 8vw, 48px);
-    text-align: center;
-  }
-  .bloc-soft {
-    font-size: clamp(14px, 4vw, 18px);
-    text-align: center;
-  }
-  /* --- СЕТКА КАРТОЧЕК --- */
-  .card-bloc {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    padding: 0 20px;
-  }
-  /* --- СТРУКТУРА ОДНОЙ КАРТОЧКИ (КЛАСС .card) --- */
-  .card {
-    display: flex; /* Включаем Flexbox для карточки */
-    flex-direction: column; /* Делаем элементы внутри карточки вертикальными */
-    align-items: stretch; /* Картинка и текст растягиваются на всю ширину */
-    height: auto; /* Высота карточки зависит от контента */
-  }
-  .card__img,
-  .card__img1,
-  .card__img2,
-  .card__img3,
-  .card__img4,
-  .card__img5 {
-    width: 100%;
-    height: auto;
-    border-radius: 20px 20px 0 0; /* Скругляем только верхние углы */
-  }
-  .card__text,
-  .card__text--one,
-  .card__text--two,
-  .card__text--three,
-  .card__text--four,
-  .card__text--five {
-    width: 100%;
-    padding: 20px;
-    border-radius: 0 0 20px 20px; /* Скругляем только нижние углы */
-  }
-  /* --- ЛЕНТА (СКРОЛЛИНГ) --- */
-  .lenta {
-    position: static; /* Убираем абсолютное позиционирование */
-    margin-top: -10px; /* Компенсируем отступ, если нужно */
-    padding-left: 20px;
-    padding-right: 20px;
-    overflow-x: auto; /* Включаем горизонтальный скролл если нужно */
-    display: flex; /* Делаем ленту флекс-контейнером для правильного поведения элементов */
-    gap: 24px; /* Уменьшаем расстояние между элементами ленты */
-  }
-  /* --- МИНИ-ИГРЫ (скрываем на мобилке для чистоты) --- */
-  .mini-bloc {
-    display: none;
-  }
-}/*# sourceMappingURL=style.css.map */
+@import 'mobile';
