@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 * {
   padding: 0;
   margin: 0;
@@ -24,114 +25,104 @@ body {
 }
 
 .cart {
-  position: relative;
-  /* Добавлено для корректного позиционирования .cart-image */
   background: rgb(225, 255, 143);
-  display: flex;
-  flex-direction: row-reverse;
-  height: 710px;
-  /* Высота задана вами */
+  /* padding-top: 100px;
+  padding-top: 120px;*/
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+
 }
+
 .container {
-  position: absolute;
+  position: relative;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1440px;
-  padding-left: 15px;
-  /* Добавляем внутренние отступы для мобильных устройств */
-  padding-right: 15px;
   background: #E1FF8F;
 }
+
 .cart__vector {
   position: absolute;
   width: 413px;
   height: 528px;
   transform: rotate(0deg);
   opacity: 1;
-  left: 1000px;
+  right: 0;
   border-width: 1px;
 }
 
 .cart__Start-4 {
   box-sizing: border-box;
   position: absolute;
-  left: 1013px;
+  right: 250px;
   top: 568px;
 }
 
 .cart__vector-4780 {
   position: absolute;
-  width: 317px;
-  height: 163px;
-  left: 854px;
   top: -10px;
+  right: 276px;
 }
 
 .cart__Start-5 {
   box-sizing: border-box;
   position: absolute;
-  left: 948px;
+  right: 400px;
   top: 538px;
 }
 
 .cart__vector-4781 {
   position: absolute;
-  width: 142px;
-  height: 179px;
-  left: 1067px;
-  top: 225px;
+  right: 219px;
+  top: 254px;
 }
 
 .cart__Start-3 {
   box-sizing: border-box;
   position: absolute;
-  left: 123px;
+  left: 90px;
   top: 69px;
 }
 
 .cart__vector-4782 {
   position: absolute;
-  width: 219.88px;
-  height: 418px;
-  left: 1220px;
-  top: 369px;
+  right: 15px;
+  top: 379px;
 }
 
 .cart__Start-2 {
   box-sizing: border-box;
   position: absolute;
-  left: 63px;
+  left: 0;
   top: 94px;
 }
 
 .cart__vector-4788 {
   position: absolute;
-  width: 80px;
-  height: 126px;
-  left: 1247px;
+  /*width: 80px;*/
+  right: 122px;
   top: 468px;
 }
 
 .cart__vector-4791 {
   position: absolute;
-  width: 34px;
-  height: 124px;
-  left: 1345px;
+  right: 70px;
   top: 663px;
+
 }
 
 .cart-text {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 0px;
   gap: 48px;
-  position: absolute;
-  width: 769px;
-  height: 358px;
-  left: 120px;
-  top: 196px;
+  position: relative;
+  z-index: 1;
+  padding-top: 196px;
+  padding-bottom: 156px;
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+
 }
 
 .cart-text h1 {
@@ -209,7 +200,6 @@ span {
   display: flex;
   gap: 51px;
   font-weight: 700;
-  font-style: Bold;
   font-size: 30px;
   text-transform: uppercase;
   flex-wrap: nowrap;
@@ -388,6 +378,7 @@ span {
   width: 100%;
   /* Ключевое изменение */
   background: #202027;
+  
 }
 
 .bloc__Start-6 {
@@ -398,7 +389,7 @@ span {
   position: absolute;
   width: 584.72px;
   height: 584.72px;
-  left: 906px;
+  right: 0;
   top: 877px;
   transform: rotate(358deg);
 }
@@ -426,10 +417,12 @@ span {
 .bloc-catalog {
   padding: 94px 119px 46px 120px;
   opacity: 1;
-  height: 1470px;
   left: 0px;
   top: 800px;
   background: #202027;
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+
 }
 
 .bloc-name {
@@ -451,8 +444,7 @@ span {
   padding-bottom: 72px;
   /* В моей коллекции представлено 6 игр на разные темы.?Игры несложные — в них может поиграть каждый. Все игры доступны для пользования. */
   color: white;
-  width: auto;
-  font-weight: 400;
+  width: 100%;
   font-size: 24px;
 }
 
@@ -462,18 +454,24 @@ span {
   /* Три одинаковые колонки */
   gap: 32px;
   /* Расстояние между карточками */
+  position: relative;
+  justify-content: center;
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+  
 }
 
 .card {
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
+  transition: transform 0.3s ease; /* Плавное масштабирование */
 
+}
+.card:hover {
+  transform: scale(1.05); /* Увеличение на 5% */
+}
 .card--one,
 .card--two {
   z-index: 1000;
@@ -484,24 +482,17 @@ span {
   flex-direction: column;
   align-items: flex-start;
   transform: translateY(-40px);
-  padding: 0px;
-  width: 378px;
-  height: 1056px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
+ /* width: 378px;*/
+ 
 }
 
 .card--four {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0px;
-  width: 378px;
-  height: 1056px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
+ 
+  /*width: 378px;*/
+ 
 }
 
 .bloc-card_5 {
@@ -509,7 +500,7 @@ span {
 }
 
 .card__img {
-  width: 378px;
+  width: 100%;
   height: 314px;
   background-image: url("./img/igra_1.jpg");
   border-top-left-radius: 30px;
@@ -521,7 +512,7 @@ span {
 }
 
 .card__img1 {
-  width: 378px;
+  width: 100%;
   height: 314px;
   background-image: url("./img/igra_2.jpg");
   border-top-left-radius: 30px;
@@ -533,7 +524,7 @@ span {
 }
 
 .card__img2 {
-  width: 378px;
+  width: 100%;
   height: 314px;
   background-image: url("./img/igra_3.jpg");
   border-top-left-radius: 30px;
@@ -545,7 +536,7 @@ span {
 }
 
 .card__img3 {
-  width: 378px;
+  width: 100%;
   height: 314px;
   background-image: url("./img/igra_4.jpg");
   border-top-left-radius: 30px;
@@ -556,9 +547,9 @@ span {
   flex-grow: 0;
 }
 
-.card__img4 {
-  width: 378px;
-  height: 314px;
+.card__img4 { 
+  width: 100%;
+ height: 314px;
   background-image: url("./img/igra_5.jpg");
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
@@ -570,7 +561,7 @@ span {
 
 .card__img5 {
   transform: translateY(-35px);
-  width: 378px;
+  width: 100%;
   height: 314px;
   background-image: url("./img/igra_6.jpg");
   border-top-left-radius: 30px;
@@ -581,7 +572,7 @@ span {
   flex-grow: 0;
 }
 
-.card__igra card__igra1 {
+.card__igra .card__igra1 {
   text-decoration: none;
 }
 
@@ -593,7 +584,7 @@ span {
   align-items: flex-start;
   padding: 32px 32px 36px;
   gap: 16px;
-  width: 378px;
+  width: 100%;
   height: 159px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
@@ -607,7 +598,7 @@ span {
   align-items: flex-start;
   padding: 32px 32px 36px;
   gap: 16px;
-  width: 378px;
+  width: 100%;
   height: 198px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
@@ -620,7 +611,7 @@ span {
   align-items: flex-start;
   padding: 32px 32px 36px;
   gap: 16px;
-  width: 378px;
+  width: 100%;
   height: 237px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
@@ -633,7 +624,7 @@ span {
   flex-direction: column;
   align-items: flex-start;
   padding: 32px 32px 36px;
-  width: 378px;
+  width: 100%;
   height: 237px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
@@ -658,7 +649,6 @@ span {
   flex-grow: 0;
   padding: 16px 8px 9px 16px;
   width: 108px;
-  height: 36px;
   background: #F7F7F7;
   border-radius: 52.5825px;
   flex: none;
@@ -763,28 +753,20 @@ span {
 }
 
 .mini {
-  padding-left: 119px;
-  position: absolute;
-  width: 100%;
-  height: 3500px;
-  left: 0px;
-  top: 2270px;
-  left: 0;
-  /* Прижимаем к левому краю */
-  right: 0;
-  /* Прижимаем к правому краю */
   background: #202027;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 32px;
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
 }
 
 .mini__Start-7 {
   position: absolute;
   padding-top: 47px;
   width: 35.15px;
-  left: 1300px;
+  right: 260px;
   transform: rotate(7.08deg);
 }
 
@@ -792,7 +774,7 @@ span {
   position: absolute;
   padding-top: 77px;
   width: 68.86px;
-  left: 1340px;
+  right: 160px;
   transform: rotate(5.45deg);
 }
 
@@ -810,7 +792,7 @@ span {
   display: flex;
   flex-direction: row;
   padding: 0px;
-  width: 1230px;
+  width: 100%;
   background: #FFFFFF;
   box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
   border-radius: 30px;
@@ -825,7 +807,7 @@ span {
   display: flex;
   flex-direction: row-reverse;
   padding: 0px;
-  width: 1230px;
+  width: 100%;
   background: #FFFFFF;
   box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
   border-radius: 30px;
@@ -837,7 +819,7 @@ span {
   display: flex;
   flex-direction: row;
   padding: 0px;
-  width: 1230px;
+  width: 100%;
   background: #FFFFFF;
   box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
   border-radius: 30px;
@@ -849,7 +831,7 @@ span {
   display: flex;
   flex-direction: row-reverse;
   padding: 0px;
-  width: 1230px;
+  width: 100%;
   background: #FFFFFF;
   box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
   border-radius: 30px;
@@ -861,7 +843,7 @@ span {
   display: flex;
   flex-direction: row;
   padding: 0px;
-  width: 1230px;
+  width: 100%;
   background: #FFFFFF;
   box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
   border-radius: 30px;
@@ -873,7 +855,7 @@ span {
   display: flex;
   flex-direction: row-reverse;
   padding: 0px;
-  width: 1230px;
+  width: 100%;
   background: #FFFFFF;
   box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
   border-radius: 30px;
@@ -883,7 +865,7 @@ span {
 
 .mini__img {
   /* Обложка карточки */
-  width: 600px;
+  width: 50%;
   height: 500px;
   /* Inside auto layout */
   flex: none;
@@ -896,7 +878,7 @@ span {
 
 .mini__img_1 {
   /* Обложка карточки */
-  width: 600px;
+  width: 50%;
   height: 500px;
   flex: none;
   flex-grow: 0;
@@ -906,7 +888,7 @@ span {
 
 .mini__img_2 {
   /* Обложка карточки */
-  width: 600px;
+  width: 50%;
   height: 500px;
   flex: none;
   flex-grow: 0;
@@ -916,7 +898,7 @@ span {
 
 .mini__img_3 {
   /* Обложка карточки */
-  width: 600px;
+  width: 50%;
   height: 500px;
   flex: none;
   flex-grow: 0;
@@ -926,7 +908,7 @@ span {
 
 .mini__img_4 {
   /* Обложка карточки */
-  width: 600px;
+  width: 50%;
   height: 500px;
   flex: none;
   flex-grow: 0;
@@ -936,7 +918,7 @@ span {
 
 .mini__img_5 {
   /* Обложка карточки */
-  width: 600px;
+  width: 50%;
   height: 500px;
   flex: none;
   flex-grow: 0;
@@ -950,13 +932,14 @@ span {
   flex-direction: column;
   align-items: flex-start;
   padding: 48px 48px 203px 48px;
-  width: 378px;
+  width: 50%;
   border-radius: 30px;
 }
 
 .mini__text--one {
   display: flex;
   flex-direction: column;
+  width: 50%;
   border-radius: 30px;
   padding: 48px 48px 144px 48px;
   border-top-left-radius: 30px;
@@ -970,6 +953,7 @@ span {
   align-items: flex-start;
   padding: 48px 48px 203px 48px;
   border-radius: 30px;
+  width: 50%;
 }
 
 .mini__text--three {
@@ -978,6 +962,7 @@ span {
   flex-direction: column;
   border-radius: 30px;
   padding: 48px 48px 85px 48px;
+  width: 50%;
 }
 
 .mini__text--four {
@@ -986,6 +971,8 @@ span {
   flex-direction: column;
   border-radius: 30px;
   padding: 48px 48px 144px 48px;
+  width: 50%;
+
 }
 
 .mini__text--five {
@@ -994,6 +981,7 @@ span {
   flex-direction: column;
   border-radius: 30px;
   padding: 48px 48px 85px 48px;
+  width: 50%;
 }
 
 .mini__soft,
@@ -1022,7 +1010,7 @@ span {
 .mini__info3,
 .mini__info4,
 .mini__info5 {
-  width: 497px;
+  width: 100%;
   font-size: 24px;
   color: #202027;
   padding-bottom: 36px;
@@ -1052,32 +1040,25 @@ span {
   position: absolute;
   width: 69px;
   height: 69px;
-  left: 1319px;
-  top: 5636px;
+  right: 160px;
+  margin-bottom: 65px;
 }
 
 .mini__Start-9 {
   position: absolute;
   width: 41px;
   height: 41px;
-  left: 1249px;
-  top: 5684px;
-}
+  right: 260px;
+ }
 
 .footer {
-  position: absolute;
-  width: 100%;
-  height: 150px;
-  left: 0px;
-  top: 5770px;
   background: #BDED35;
+  margin-top: 144px;
+  width: 100%;
 }
-
 .footer__text {
   padding: 61px 578px 60px 578px;
   left: calc(50% - 142.5px + 0.5px);
-  top: 5831px;
-  font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -1086,7 +1067,10 @@ span {
   align-items: center;
   text-align: center;
   color: #000000;
+  justify-content: center;
 }
+
+
 
 /* Ключевые кадры анимации */
 @keyframes scrollLeft {
@@ -1094,9 +1078,11 @@ span {
     transform: translateX(100%);
     /* Стартовая позиция - сдвинут вправо на свою ширину */
   }
+
   to {
     transform: translateX(-100%);
     /* Конечная позиция - сдвинут влево на свою ширину */
   }
 }
+
 @import 'mobile';

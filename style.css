@@ -24,24 +24,16 @@ body {
 }
 
 .cart {
-  position: relative;
-  /* Добавлено для корректного позиционирования .cart-image */
   background: rgb(225, 255, 143);
-  display: flex;
-  flex-direction: row-reverse;
-  height: 710px;
-  /* Высота задана вами */
+  /* padding-top: 100px;
+  padding-top: 120px;*/
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
 }
 
 .container {
-  position: absolute;
+  position: relative;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1440px;
-  padding-left: 15px;
-  /* Добавляем внутренние отступы для мобильных устройств */
-  padding-right: 15px;
   background: #E1FF8F;
 }
 
@@ -51,89 +43,82 @@ body {
   height: 528px;
   transform: rotate(0deg);
   opacity: 1;
-  left: 1000px;
+  right: 0;
   border-width: 1px;
 }
 
 .cart__Start-4 {
   box-sizing: border-box;
   position: absolute;
-  left: 1013px;
+  right: 250px;
   top: 568px;
 }
 
 .cart__vector-4780 {
   position: absolute;
-  width: 317px;
-  height: 163px;
-  left: 854px;
   top: -10px;
+  right: 276px;
 }
 
 .cart__Start-5 {
   box-sizing: border-box;
   position: absolute;
-  left: 948px;
+  right: 400px;
   top: 538px;
 }
 
 .cart__vector-4781 {
   position: absolute;
-  width: 142px;
-  height: 179px;
-  left: 1067px;
-  top: 225px;
+  right: 219px;
+  top: 254px;
 }
 
 .cart__Start-3 {
   box-sizing: border-box;
   position: absolute;
-  left: 123px;
+  left: 90px;
   top: 69px;
 }
 
 .cart__vector-4782 {
   position: absolute;
-  width: 219.88px;
-  height: 418px;
-  left: 1220px;
-  top: 369px;
+  right: 15px;
+  top: 379px;
 }
 
 .cart__Start-2 {
   box-sizing: border-box;
   position: absolute;
-  left: 63px;
+  left: 0;
   top: 94px;
 }
 
 .cart__vector-4788 {
   position: absolute;
-  width: 80px;
-  height: 126px;
-  left: 1247px;
+  /*width: 80px;*/
+  right: 122px;
   top: 468px;
 }
 
 .cart__vector-4791 {
   position: absolute;
-  width: 34px;
-  height: 124px;
-  left: 1345px;
+  right: 70px;
   top: 663px;
 }
 
 .cart-text {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 0px;
   gap: 48px;
-  position: absolute;
-  width: 769px;
-  height: 358px;
-  left: 120px;
-  top: 196px;
+  position: relative;
+  z-index: 1;
+  padding-top: 196px;
+  padding-bottom: 156px;
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
 }
 
 .cart-text h1 {
@@ -211,7 +196,6 @@ span {
   display: flex;
   gap: 51px;
   font-weight: 700;
-  font-style: Bold;
   font-size: 30px;
   text-transform: uppercase;
   flex-wrap: nowrap;
@@ -400,7 +384,7 @@ span {
   position: absolute;
   width: 584.72px;
   height: 584.72px;
-  left: 906px;
+  right: 0;
   top: 877px;
   transform: rotate(358deg);
 }
@@ -428,10 +412,11 @@ span {
 .bloc-catalog {
   padding: 94px 119px 46px 120px;
   opacity: 1;
-  height: 1470px;
   left: 0px;
   top: 800px;
   background: #202027;
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
 }
 
 .bloc-name {
@@ -453,8 +438,7 @@ span {
   padding-bottom: 72px;
   /* В моей коллекции представлено 6 игр на разные темы.?Игры несложные — в них может поиграть каждый. Все игры доступны для пользования. */
   color: white;
-  width: auto;
-  font-weight: 400;
+  width: 100%;
   font-size: 24px;
 }
 
@@ -464,16 +448,21 @@ span {
   /* Три одинаковые колонки */
   gap: 32px;
   /* Расстояние между карточками */
+  position: relative;
+  justify-content: center;
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
 }
 
 .card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
+  transition: transform 0.3s ease; /* Плавное масштабирование */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Увеличение на 5% */
 }
 
 .card--one,
@@ -486,24 +475,14 @@ span {
   flex-direction: column;
   align-items: flex-start;
   transform: translateY(-40px);
-  padding: 0px;
-  width: 378px;
-  height: 1056px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
+  /* width: 378px;*/
 }
 
 .card--four {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0px;
-  width: 378px;
-  height: 1056px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
+  /*width: 378px;*/
 }
 
 .bloc-card_5 {
@@ -511,7 +490,7 @@ span {
 }
 
 .card__img {
-  width: 378px;
+  width: 100%;
   height: 314px;
   background-image: url("./img/igra_1.jpg");
   border-top-left-radius: 30px;
@@ -523,7 +502,7 @@ span {
 }
 
 .card__img1 {
-  width: 378px;
+  width: 100%;
   height: 314px;
   background-image: url("./img/igra_2.jpg");
   border-top-left-radius: 30px;
@@ -535,7 +514,7 @@ span {
 }
 
 .card__img2 {
-  width: 378px;
+  width: 100%;
   height: 314px;
   background-image: url("./img/igra_3.jpg");
   border-top-left-radius: 30px;
@@ -547,7 +526,7 @@ span {
 }
 
 .card__img3 {
-  width: 378px;
+  width: 100%;
   height: 314px;
   background-image: url("./img/igra_4.jpg");
   border-top-left-radius: 30px;
@@ -559,7 +538,7 @@ span {
 }
 
 .card__img4 {
-  width: 378px;
+  width: 100%;
   height: 314px;
   background-image: url("./img/igra_5.jpg");
   border-top-left-radius: 30px;
@@ -572,7 +551,7 @@ span {
 
 .card__img5 {
   transform: translateY(-35px);
-  width: 378px;
+  width: 100%;
   height: 314px;
   background-image: url("./img/igra_6.jpg");
   border-top-left-radius: 30px;
@@ -583,7 +562,7 @@ span {
   flex-grow: 0;
 }
 
-.card__igra card__igra1 {
+.card__igra .card__igra1 {
   text-decoration: none;
 }
 
@@ -595,7 +574,7 @@ span {
   align-items: flex-start;
   padding: 32px 32px 36px;
   gap: 16px;
-  width: 378px;
+  width: 100%;
   height: 159px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
@@ -609,7 +588,7 @@ span {
   align-items: flex-start;
   padding: 32px 32px 36px;
   gap: 16px;
-  width: 378px;
+  width: 100%;
   height: 198px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
@@ -622,7 +601,7 @@ span {
   align-items: flex-start;
   padding: 32px 32px 36px;
   gap: 16px;
-  width: 378px;
+  width: 100%;
   height: 237px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
@@ -635,7 +614,7 @@ span {
   flex-direction: column;
   align-items: flex-start;
   padding: 32px 32px 36px;
-  width: 378px;
+  width: 100%;
   height: 237px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
@@ -660,7 +639,6 @@ span {
   flex-grow: 0;
   padding: 16px 8px 9px 16px;
   width: 108px;
-  height: 36px;
   background: #F7F7F7;
   border-radius: 52.5825px;
   flex: none;
@@ -765,28 +743,20 @@ span {
 }
 
 .mini {
-  padding-left: 119px;
-  position: absolute;
-  width: 100%;
-  height: 3500px;
-  left: 0px;
-  top: 2270px;
-  left: 0;
-  /* Прижимаем к левому краю */
-  right: 0;
-  /* Прижимаем к правому краю */
   background: #202027;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 32px;
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
 }
 
 .mini__Start-7 {
   position: absolute;
   padding-top: 47px;
   width: 35.15px;
-  left: 1300px;
+  right: 260px;
   transform: rotate(7.08deg);
 }
 
@@ -794,7 +764,7 @@ span {
   position: absolute;
   padding-top: 77px;
   width: 68.86px;
-  left: 1340px;
+  right: 160px;
   transform: rotate(5.45deg);
 }
 
@@ -812,7 +782,7 @@ span {
   display: flex;
   flex-direction: row;
   padding: 0px;
-  width: 1230px;
+  width: 100%;
   background: #FFFFFF;
   box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
   border-radius: 30px;
@@ -827,7 +797,7 @@ span {
   display: flex;
   flex-direction: row-reverse;
   padding: 0px;
-  width: 1230px;
+  width: 100%;
   background: #FFFFFF;
   box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
   border-radius: 30px;
@@ -839,7 +809,7 @@ span {
   display: flex;
   flex-direction: row;
   padding: 0px;
-  width: 1230px;
+  width: 100%;
   background: #FFFFFF;
   box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
   border-radius: 30px;
@@ -851,7 +821,7 @@ span {
   display: flex;
   flex-direction: row-reverse;
   padding: 0px;
-  width: 1230px;
+  width: 100%;
   background: #FFFFFF;
   box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
   border-radius: 30px;
@@ -863,7 +833,7 @@ span {
   display: flex;
   flex-direction: row;
   padding: 0px;
-  width: 1230px;
+  width: 100%;
   background: #FFFFFF;
   box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
   border-radius: 30px;
@@ -875,7 +845,7 @@ span {
   display: flex;
   flex-direction: row-reverse;
   padding: 0px;
-  width: 1230px;
+  width: 100%;
   background: #FFFFFF;
   box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
   border-radius: 30px;
@@ -885,7 +855,7 @@ span {
 
 .mini__img {
   /* Обложка карточки */
-  width: 600px;
+  width: 50%;
   height: 500px;
   /* Inside auto layout */
   flex: none;
@@ -898,7 +868,7 @@ span {
 
 .mini__img_1 {
   /* Обложка карточки */
-  width: 600px;
+  width: 50%;
   height: 500px;
   flex: none;
   flex-grow: 0;
@@ -908,7 +878,7 @@ span {
 
 .mini__img_2 {
   /* Обложка карточки */
-  width: 600px;
+  width: 50%;
   height: 500px;
   flex: none;
   flex-grow: 0;
@@ -918,7 +888,7 @@ span {
 
 .mini__img_3 {
   /* Обложка карточки */
-  width: 600px;
+  width: 50%;
   height: 500px;
   flex: none;
   flex-grow: 0;
@@ -928,7 +898,7 @@ span {
 
 .mini__img_4 {
   /* Обложка карточки */
-  width: 600px;
+  width: 50%;
   height: 500px;
   flex: none;
   flex-grow: 0;
@@ -938,7 +908,7 @@ span {
 
 .mini__img_5 {
   /* Обложка карточки */
-  width: 600px;
+  width: 50%;
   height: 500px;
   flex: none;
   flex-grow: 0;
@@ -952,13 +922,14 @@ span {
   flex-direction: column;
   align-items: flex-start;
   padding: 48px 48px 203px 48px;
-  width: 378px;
+  width: 50%;
   border-radius: 30px;
 }
 
 .mini__text--one {
   display: flex;
   flex-direction: column;
+  width: 50%;
   border-radius: 30px;
   padding: 48px 48px 144px 48px;
   border-top-left-radius: 30px;
@@ -972,6 +943,7 @@ span {
   align-items: flex-start;
   padding: 48px 48px 203px 48px;
   border-radius: 30px;
+  width: 50%;
 }
 
 .mini__text--three {
@@ -980,6 +952,7 @@ span {
   flex-direction: column;
   border-radius: 30px;
   padding: 48px 48px 85px 48px;
+  width: 50%;
 }
 
 .mini__text--four {
@@ -988,6 +961,7 @@ span {
   flex-direction: column;
   border-radius: 30px;
   padding: 48px 48px 144px 48px;
+  width: 50%;
 }
 
 .mini__text--five {
@@ -996,6 +970,7 @@ span {
   flex-direction: column;
   border-radius: 30px;
   padding: 48px 48px 85px 48px;
+  width: 50%;
 }
 
 .mini__soft,
@@ -1024,7 +999,7 @@ span {
 .mini__info3,
 .mini__info4,
 .mini__info5 {
-  width: 497px;
+  width: 100%;
   font-size: 24px;
   color: #202027;
   padding-bottom: 36px;
@@ -1054,32 +1029,26 @@ span {
   position: absolute;
   width: 69px;
   height: 69px;
-  left: 1319px;
-  top: 5636px;
+  right: 160px;
+  margin-bottom: 65px;
 }
 
 .mini__Start-9 {
   position: absolute;
   width: 41px;
   height: 41px;
-  left: 1249px;
-  top: 5684px;
+  right: 260px;
 }
 
 .footer {
-  position: absolute;
-  width: 100%;
-  height: 150px;
-  left: 0px;
-  top: 5770px;
   background: #BDED35;
+  margin-top: 144px;
+  width: 100%;
 }
 
 .footer__text {
   padding: 61px 578px 60px 578px;
   left: calc(50% - 142.5px + 0.5px);
-  top: 5831px;
-  font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -1088,6 +1057,7 @@ span {
   align-items: center;
   text-align: center;
   color: #000000;
+  justify-content: center;
 }
 
 /* Ключевые кадры анимации */
@@ -1103,37 +1073,20 @@ span {
 }
 /* Стили для экранов с шириной до 767 пикселей */
 @media (max-width: 767px) {
-  /* --- ОСНОВНОЙ КОНТЕЙНЕР И КОРЗИНА --- */
+  /* Этот код сработает только на мобильных устройствах */
   .cart {
-    flex-direction: column; /* Делаем элементы вертикальными */
-    height: auto; /* Высота зависит от контента */
-    padding-bottom: 40px; /* Отступ перед следующим блоком */
+    padding-left: calc(50% - 171.5px);
+    padding-right: calc(50% - 171.5px);
   }
-  /* --- ТЕКСТ КОРЗИНЫ --- */
-  .cart-text {
-    position: static; /* Возвращаем в поток */
-    width: 90%;
-    max-width: 500px;
-    margin: 40px auto; /* Центрируем и добавляем отступ сверху */
-    text-align: center;
+  .container {
+    max-width: 100%;
+    /* Занимает всю доступную ширину */
   }
-  .cart-text h1 {
-    font-size: clamp(32px, 8vw, 48px);
-    line-height: 1.2;
-    white-space: normal;
-    height: auto;
+  .cart__vector {
+    position: absolute;
+    width: 223px;
+    height: 238px;
   }
-  .cart-text p {
-    font-size: clamp(14px, 4vw, 18px);
-    line-height: 1.6;
-    height: auto;
-  }
-  .cart-text__button {
-    width: 100%;
-    max-width: 300px;
-    margin: 20px auto;
-  }
-  /* --- СКРЫВАЕМ НЕНУЖНЫЕ ДЕКОРАЦИИ --- */
   .cart__vector-4780,
   .cart__vector-4781,
   .cart__vector-4782,
@@ -1141,34 +1094,77 @@ span {
   .cart__vector-4791 {
     display: none;
   }
-  /* --- БЛОК С КАТАЛОГОМ ИГР --- */
+  .cart__Start-4 {
+    width: 39px;
+    left: 304px;
+    top: 580px;
+  }
+  .cart__Start-5 {
+    width: 18px;
+    left: 273px;
+    top: 557px;
+  }
+  /* Текст корзины */
+  .cart-text {
+    padding-left: calc(50% - 171.5px);
+    padding-right: calc(50% - 171.5px);
+    padding-top: 147px;
+    padding-bottom: 131px;
+    gap: 36px;
+  }
+  /* Заголовок H1 внутри текста корзины */
+  .cart-text h1 {
+    width: 262px;
+    height: 196px;
+    font-size: 40px;
+    line-height: 1.4em;
+    text-align: center;
+  }
+  /* Параграф внутри текста корзины */
+  .cart-text p {
+    width: 296px;
+    height: 60px;
+    font-size: 16px;
+    line-height: 1.6em;
+    text-align: center;
+  }
+  /* Кнопка: растянута на всю ширину родителя */
+  .cart-text__button {
+    width: 285px;
+    height: 55px;
+    padding: 16px 24px 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    /* Центрирует кнопку относительно родителя */
+  }
+  span {
+    font-size: 16px;
+  }
   .bloc-catalog {
-    position: static;
-    background: #202027;
-    padding: 40px 20px;
-    margin-top: 20px;
+    padding: 16px 0px 16px 9px;
+    padding-left: calc(50% - 171.5px);
+    padding-right: calc(50% - 171.5px);
   }
   .bloc-name {
-    font-size: clamp(32px, 8vw, 48px);
-    text-align: center;
+    display: none;
   }
   .bloc-soft {
-    font-size: clamp(14px, 4vw, 18px);
-    text-align: center;
+    display: none;
   }
-  /* --- СЕТКА КАРТОЧЕК --- */
   .card-bloc {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    padding: 0 20px;
+    display: none;
   }
-  /* --- СТРУКТУРА ОДНОЙ КАРТОЧКИ (КЛАСС .card) --- */
   .card {
-    display: flex; /* Включаем Flexbox для карточки */
-    flex-direction: column; /* Делаем элементы внутри карточки вертикальными */
-    align-items: stretch; /* Картинка и текст растягиваются на всю ширину */
-    height: auto; /* Высота карточки зависит от контента */
+    flex-direction: column;
+    /* Вертикальное расположение элементов */
+    align-items: stretch;
+    /* Чтобы картинка и текст занимали всю ширину */
+    height: auto;
+    /* Высота карточки подстраивается под контент */
   }
+  /* 3. Стили для изображения внутри карточки */
   .card__img,
   .card__img1,
   .card__img2,
@@ -1176,9 +1172,16 @@ span {
   .card__img4,
   .card__img5 {
     width: 100%;
+    /* Картинка занимает всю ширину карточки */
     height: auto;
-    border-radius: 20px 20px 0 0; /* Скругляем только верхние углы */
+    /* Высота подстраивается, чтобы сохранить пропорции */
+    border-radius: 30px 30px 0 0;
+    /* Скругляем только верхние углы */
+    -o-object-fit: cover;
+       object-fit: cover;
+    /* Изображение будет масштабироваться без искажений */
   }
+  /* 4. Стили для текстового блока внутри карточки */
   .card__text,
   .card__text--one,
   .card__text--two,
@@ -1186,21 +1189,234 @@ span {
   .card__text--four,
   .card__text--five {
     width: 100%;
-    padding: 20px;
-    border-radius: 0 0 20px 20px; /* Скругляем только нижние углы */
+    /* Текстовый блок занимает всю ширину карточки */
+    padding: 24px;
+    /* Уменьшаем внутренние отступы для мобайла */
+    border-radius: 0 0 30px 30px;
+    /* Скругляем только нижние углы */
   }
-  /* --- ЛЕНТА (СКРОЛЛИНГ) --- */
   .lenta {
-    position: static; /* Убираем абсолютное позиционирование */
-    margin-top: -10px; /* Компенсируем отступ, если нужно */
-    padding-left: 20px;
-    padding-right: 20px;
-    overflow-x: auto; /* Включаем горизонтальный скролл если нужно */
-    display: flex; /* Делаем ленту флекс-контейнером для правильного поведения элементов */
-    gap: 24px; /* Уменьшаем расстояние между элементами ленты */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100%;
+    /* Не вылезать за края экрана */
+    padding: 16px 24px;
+    top: 636px;
   }
-  /* --- МИНИ-ИГРЫ (скрываем на мобилке для чистоты) --- */
-  .mini-bloc {
+  .lenta-content {
+    gap: 6px;
+  }
+  .lenta-content__item-1 {
+    /* Викторина */
+    height: 18px;
+    font-size: 16px;
+  }
+  .lenta-content__Start {
+    width: 19px;
+    height: 19px;
+  }
+  .lenta-content__item-2 {
+    height: 18px;
+    font-size: 16px;
+  }
+  .lenta-content__Start-1 {
+    width: 19px;
+    height: 19px;
+  }
+  .lenta-content__item-3 {
+    height: 18px;
+    font-size: 16px;
+  }
+  .lenta-content__Start-2 {
+    width: 19px;
+    height: 19px;
+  }
+  .lenta-content__item-4 {
+    height: 18px;
+    font-size: 16px;
+  }
+  .lenta-content__Start-3 {
+    width: 19px;
+    height: 19px;
+  }
+  .lenta-content__item-5 {
+    height: 18px;
+    font-size: 16px;
+  }
+  .lenta-content__Start-4 {
+    width: 19px;
+    height: 19px;
+  }
+  .lenta-content__item-6 {
+    height: 18px;
+    font-size: 16px;
+  }
+  .lenta-content__Start-5 {
+    width: 19px;
+    height: 19px;
+  }
+  .bloc {
+    width: 100%;
+    /* Ключевое изменение */
+    background: #202027;
+  }
+  .bloc__Start-6 {
     display: none;
+  }
+  .bloc__Start-11 {
+    display: none;
+  }
+  .bloc__Start-12 {
+    display: none;
+  }
+  .mini {
+    gap: 24px;
+    padding-left: calc(50% - 171.5px);
+    padding-right: calc(50% - 171.5px);
+  }
+  .mini__Start-7 {
+    display: none;
+  }
+  .mini__Start-8 {
+    display: none;
+  }
+  .mini__Start-12 {
+    display: none;
+  }
+  .mini__Start-9 {
+    display: none;
+  }
+  .mini__card {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    height: 528px;
+  }
+  .mini__card--one {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    height: 567px;
+  }
+  .mini__card--two {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    height: 567px;
+  }
+  .mini__card--three {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    height: 606px;
+  }
+  .mini__card--four {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    height: 567px;
+  }
+  .mini__card--five {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    height: 626px;
+  }
+  .mini-name1 {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    /* Мини-игры */
+    font-size: 40px;
+  }
+  .mini__img,
+  .mini__img_1,
+  .mini__img_2,
+  .mini__img_3,
+  .mini__img_4,
+  .mini__img_5 {
+    /* Обложка карточки */
+    height: 284px;
+    width: 100%;
+    border-top-left-radius: 30px;
+  }
+  .mini__text {
+    width: 100%;
+    /* Занимает всю ширину карточки, а не 249px */
+    min-height: 40px;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    padding: 29px 29px 32px 32px;
+    /* Боковые отступы как у текстовых блоков ниже */
+    box-sizing: border-box;
+  }
+  .mini__text--one {
+    /*padding: 48px;*/
+    box-sizing: border-box;
+    padding: 29px 29px 29px 32px;
+  }
+  .mini__text--two {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 29px 29px 29px 32px;
+  }
+  .mini__text--three {
+    display: flex;
+    flex-direction: column;
+    padding: 29px 29px 29px 32px;
+  }
+  .mini__text--four {
+    display: flex;
+    flex-direction: column;
+    padding: 29px 29px 29px 32px;
+  }
+  .mini__text--five {
+    display: flex;
+    flex-direction: column;
+    padding: 29px 29px 29px 32px;
+  }
+  .mini__soft,
+  .mini__soft1,
+  .mini__soft2,
+  .mini__soft3,
+  .mini__soft4,
+  .mini__soft5 {
+    padding-bottom: 16px;
+    width: 284px;
+    font-size: 32px;
+  }
+  .mini__info,
+  .mini__info1,
+  .mini__info2,
+  .mini__info3,
+  .mini__info4,
+  .mini__info5 {
+    width: 285px;
+    font-size: 16px;
+    padding-bottom: 32px;
+  }
+  .mini__button,
+  .mini__button1,
+  .mini__button2,
+  .mini__button3,
+  .mini__button4,
+  .mini__button5 {
+    width: 285px;
+    height: 55px;
+  }
+  .footer {
+    margin-top: 9px;
+    font-weight: 190;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .footer__text {
+    padding: 40px 92px 40px 93px;
+    font-size: 16px;
+    width: 375px;
+    height: 100px;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -1,129 +1,436 @@
 /* Стили для экранов с шириной до 767 пикселей */
 @media (max-width: 767px) {
+
     /* Этот код сработает только на мобильных устройствах */
     .cart {
 
-        width: 376px;
+        padding-left: calc(50% - 343px/2);
+        padding-right: calc(50% - 343px/2);
     }
 
     .container {
         max-width: 100%;
         /* Занимает всю доступную ширину */
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 16px;
-        padding-right: 16px;
-        /* height: 700px; */
-        /* Рекомендуется убрать или заменить на min-height */
 
     }
-/*.cart__vector-4780,
-.cart__vector-4781,
-.cart__vector-4782,
-.cart__vector-4788,
-.cart__vector-4791{
-    display: none;
-}
-    /* Текст корзины */
-    .cart-text {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 36px;
-        width: 100%;
-        /* Растягивается на весь контейнер */
-        padding: 0;
-    }
 
-    /* Заголовок H1 внутри текста корзины */
-    .cart-text h1 {
-        width: 100%;
-        font-size: 24px;
-        /* Уменьшен размер шрифта для мобилки */
-        line-height: 1.4em;
-        text-align: center;
-        margin: 0;
-    }
-
-    /* Параграф внутри текста корзины */
-    .cart-text p {
-        width: 100%;
-        font-size: 14px;
-        line-height: 1.6em;
-        text-align: center;
-        margin: 0;
-    }
-
-    /* Кнопка: растянута на всю ширину родителя */
-    .cart-text__button {
-        box-sizing: border-box;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        /* Ключевое изменение */
-        max-width: 343px;
-        /* Ограничение максимальной ширины для красоты */
-        margin: 0 auto;
-        /* Центрирует кнопку относительно родителя */
-        padding: 16px 28px;
-        border-radius: 60px;
-        border: none;
-        cursor: pointer;
-        font-weight: bold;
-    }
-/* Это правило найдет элемент с классом 'bloc' и скроет его */
-
-
-/*.mini-bloc {
-    display: none;
-}
-.bloc-catalog {
-    display: none;
-}*/
- .card-bloc {
-    position: static;
-        background: #202027;
-        padding: 40px 20px;
-        margin-top: 20px;
- .card {
-    flex-direction: column; /* Вертикальное расположение элементов */
-    align-items: stretch; /* Чтобы картинка и текст занимали всю ширину */
-    height: auto; /* Высота карточки подстраивается под контент */
- }
- /* 3. Стили для изображения внутри карточки */
- .card__img,
- .card__img1,
- .card__img2,
- .card__img3,
- .card__img4,
- .card__img5 {
-     width: 100%; /* Картинка занимает всю ширину карточки */
-     height: auto; /* Высота подстраивается, чтобы сохранить пропорции */
-     border-radius: 30px 30px 0 0; /* Скругляем только верхние углы */
-     object-fit: cover; /* Изображение будет масштабироваться без искажений */
- }
-
- /* 4. Стили для текстового блока внутри карточки */
- .card__text,
- .card__text--one,
- .card__text--two,
- .card__text--three,
- .card__text--four,
- .card__text--five {
-     width: 100%; /* Текстовый блок занимает всю ширину карточки */
-     padding: 24px; /* Уменьшаем внутренние отступы для мобайла */
-     border-radius: 0 0 30px 30px; /* Скругляем только нижние углы */
- }
-
-    .lenta {
+    .cart__vector {
         position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        max-width: 100%;
-        /* Не вылезать за края экрана */
-        padding: 16px 24px;
-
+        width: 223px;
+        height: 238px;
     }
+
+    .cart__vector-4780,
+    .cart__vector-4781,
+    .cart__vector-4782,
+    .cart__vector-4788,
+    .cart__vector-4791 {
+    display: none;
+    }
+
+.cart__Start-4 {
+    width: 39px;
+    left: 304px;
+    top: 580px;
+}
+
+.cart__Start-5 {
+    width: 18px;
+    left: 273px;
+    top: 557px;
+}
+
+/* Текст корзины */
+.cart-text {
+    padding-left: calc(50% - 343px/2);
+    padding-right: calc(50% - 343px/2);
+    padding-top: 147px;
+    padding-bottom: 131px;
+    gap: 36px;
+
+}
+
+/* Заголовок H1 внутри текста корзины */
+.cart-text h1 {
+    width: 262px;
+    height: 196px;
+    font-size: 40px;
+    line-height: 1.4em;
+    text-align: center;
+}
+
+/* Параграф внутри текста корзины */
+.cart-text p {
+    width: 296px;
+    height: 60px;
+    font-size: 16px;
+    line-height: 1.6em;
+    text-align: center;
+
+}
+
+/* Кнопка: растянута на всю ширину родителя */
+.cart-text__button {
+    width: 285px;
+    height: 55px;
+    padding: 16px 24px 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    /* Центрирует кнопку относительно родителя */
+
+}
+
+span {
+
+    font-size: 16px;
+
+}
+
+.bloc-catalog {
+    padding: 16px 0px 16px 9px;
+    padding-left: calc(50% - 343px/2);
+    padding-right: calc(50% - 343px/2);
+}
+
+.bloc-name {
+    display: none;
+}
+
+.bloc-soft {
+    display: none;
+}
+
+.card-bloc {
+    display: none;
+}
+
+.card {
+    flex-direction: column;
+    /* Вертикальное расположение элементов */
+    align-items: stretch;
+    /* Чтобы картинка и текст занимали всю ширину */
+    height: auto;
+    /* Высота карточки подстраивается под контент */
+}
+
+/* 3. Стили для изображения внутри карточки */
+.card__img,
+.card__img1,
+.card__img2,
+.card__img3,
+.card__img4,
+.card__img5 {
+    width: 100%;
+    /* Картинка занимает всю ширину карточки */
+    height: auto;
+    /* Высота подстраивается, чтобы сохранить пропорции */
+    border-radius: 30px 30px 0 0;
+    /* Скругляем только верхние углы */
+    object-fit: cover;
+    /* Изображение будет масштабироваться без искажений */
+}
+
+/* 4. Стили для текстового блока внутри карточки */
+.card__text,
+.card__text--one,
+.card__text--two,
+.card__text--three,
+.card__text--four,
+.card__text--five {
+    width: 100%;
+    /* Текстовый блок занимает всю ширину карточки */
+    padding: 24px;
+    /* Уменьшаем внутренние отступы для мобайла */
+    border-radius: 0 0 30px 30px;
+    /* Скругляем только нижние углы */
+}
+
+.lenta {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100%;
+    /* Не вылезать за края экрана */
+    padding: 16px 24px;
+
+
+    top: 636px;
+}
+
+.lenta-content {
+
+    gap: 6px;
+
+}
+
+
+.lenta-content__item-1 {
+    /* Викторина */
+
+    height: 18px;
+    font-size: 16px;
+
+}
+
+.lenta-content__Start {
+    width: 19px;
+    height: 19px;
+
+}
+
+.lenta-content__item-2 {
+    height: 18px;
+    font-size: 16px;
+
+}
+
+.lenta-content__Start-1 {
+    width: 19px;
+    height: 19px;
+}
+
+.lenta-content__item-3 {
+    height: 18px;
+    font-size: 16px;
+
+}
+
+.lenta-content__Start-2 {
+    width: 19px;
+    height: 19px;
+}
+
+.lenta-content__item-4 {
+    height: 18px;
+    font-size: 16px;
+
+}
+
+.lenta-content__Start-3 {
+    width: 19px;
+    height: 19px;
+}
+
+.lenta-content__item-5 {
+    height: 18px;
+    font-size: 16px;
+
+}
+
+.lenta-content__Start-4 {
+    width: 19px;
+    height: 19px;
+}
+
+.lenta-content__item-6 {
+    height: 18px;
+    font-size: 16px;
+
+}
+
+.lenta-content__Start-5 {
+    width: 19px;
+    height: 19px;
+}
+
+.bloc {
+    width: 100%;
+    /* Ключевое изменение */
+    background: #202027;
+}
+
+.bloc__Start-6 {
+    display: none;
+}
+
+.bloc__Start-11 {
+    display: none;
+}
+
+.bloc__Start-12 {
+    display: none;
+}
+
+.mini {
+    gap: 24px;
+    padding-left: calc(50% - 343px/2);
+    padding-right: calc(50% - 343px/2);
+}
+
+.mini__Start-7 {
+    display: none;
+}
+
+.mini__Start-8 {
+    display: none;
+}
+
+.mini__Start-12 {
+    display: none;
+}
+
+.mini__Start-9 {
+    display: none;
+}
+
+.mini__card {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    height: 528px;
+}
+
+.mini__card--one {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    height: 567px;
+}
+
+.mini__card--two {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    height: 567px;
+}
+
+.mini__card--three {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    height: 606px;
+}
+
+.mini__card--four {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    height: 567px;
+}
+
+.mini__card--five {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    height: 626px;
+
+}
+
+.mini-name1 {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    /* Мини-игры */
+    font-size: 40px;
+}
+
+.mini__img,
+.mini__img_1,
+.mini__img_2,
+.mini__img_3,
+.mini__img_4,
+.mini__img_5 {
+    /* Обложка карточки */
+    height: 284px;
+    width: 100%;
+    border-top-left-radius: 30px;
+}
+
+.mini__text {
+    width: 100%;
+    /* Занимает всю ширину карточки, а не 249px */
+    min-height: 40px;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    padding: 29px 29px 32px 32px;
+    /* Боковые отступы как у текстовых блоков ниже */
+    box-sizing: border-box;
+
+}
+
+.mini__text--one {
+
+    /*padding: 48px;*/
+    box-sizing: border-box;
+    padding: 29px 29px 29px 32px;
+
+}
+
+.mini__text--two {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 29px 29px 29px 32px;
+}
+
+.mini__text--three {
+
+    display: flex;
+    flex-direction: column;
+    padding: 29px 29px 29px 32px;
+}
+
+.mini__text--four {
+    display: flex;
+    flex-direction: column;
+    padding: 29px 29px 29px 32px;
+}
+
+.mini__text--five {
+    display: flex;
+    flex-direction: column;
+    padding: 29px 29px 29px 32px;
+}
+
+.mini__soft,
+.mini__soft1,
+.mini__soft2,
+.mini__soft3,
+.mini__soft4,
+.mini__soft5 {
+    padding-bottom: 16px;
+    width: 284px;
+    font-size: 32px;
+}
+
+.mini__info,
+.mini__info1,
+.mini__info2,
+.mini__info3,
+.mini__info4,
+.mini__info5 {
+    width: 285px;
+    font-size: 16px;
+    padding-bottom: 32px;
+}
+
+.mini__button,
+.mini__button1,
+.mini__button2,
+.mini__button3,
+.mini__button4,
+.mini__button5 {
+    width: 285px;
+    height: 55px;
+}
+
+.footer {
+
+    margin-top: 9px;
+    font-weight: 190;
+    font-size: 16px;
+    line-height: 20px;
+
+}
+
+.footer__text {
+    padding: 40px 92px 40px 93px;
+    font-size: 16px;
+    width: 375px;
+    height: 100px;
+}
 }
