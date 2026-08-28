@@ -866,53 +866,53 @@ span {
   border-bottom-right-radius: 30px;
 }
 
-.mini__img_1 {
+.mini__img--one {
   /* Обложка карточки */
   width: 50%;
   height: 500px;
   flex: none;
   flex-grow: 0;
-  background-image: url("./img/mini_img_1.jpg");
+  background-image: url("./img/mini__img--one.jpg");
   border-radius: 30px;
 }
 
-.mini__img_2 {
+.mini__img--two {
   /* Обложка карточки */
   width: 50%;
   height: 500px;
   flex: none;
   flex-grow: 0;
-  background-image: url("./img/mini_img_2.jpg");
+  background-image: url("./img/mini__img--two.jpg");
   border-radius: 30px;
 }
 
-.mini__img_3 {
+.mini__img--three {
   /* Обложка карточки */
   width: 50%;
   height: 500px;
   flex: none;
   flex-grow: 0;
-  background-image: url("./img/mini_img_3.jpg");
+  background-image: url("./img/mini__img--three.jpg");
   border-radius: 30px;
 }
 
-.mini__img_4 {
+.mini__img--four {
   /* Обложка карточки */
   width: 50%;
   height: 500px;
   flex: none;
   flex-grow: 0;
-  background-image: url("./img/mini_img_4.jpg");
+  background-image: url("./img/mini__img--four.jpg");
   border-radius: 30px;
 }
 
-.mini__img_5 {
+.mini__img--five {
   /* Обложка карточки */
   width: 50%;
   height: 500px;
   flex: none;
   flex-grow: 0;
-  background-image: url("./img/mini_img_5.jpg");
+  background-image: url("./img/mini__img--five.jpg");
   border-radius: 30px;
 }
 
@@ -1025,7 +1025,7 @@ span {
   border-radius: 60px;
 }
 
-.mini__Start-12 {
+.mini-bloc__star--12 {
   position: absolute;
   width: 69px;
   height: 69px;
@@ -1033,7 +1033,7 @@ span {
   margin-bottom: 65px;
 }
 
-.mini__Start-9 {
+.mini-bloc__star--9 {
   position: absolute;
   width: 41px;
   height: 41px;
@@ -1281,10 +1281,10 @@ span {
   .mini__Start-8 {
     display: none;
   }
-  .mini__Start-12 {
+  .mini-bloc__star--12 {
     display: none;
   }
-  .mini__Start-9 {
+  .mini-bloc__star--9 {
     display: none;
   }
   .mini__card {
@@ -1330,11 +1330,11 @@ span {
     font-size: 40px;
   }
   .mini__img,
-  .mini__img_1,
-  .mini__img_2,
-  .mini__img_3,
-  .mini__img_4,
-  .mini__img_5 {
+  .mini__img--one,
+  .mini__img--two,
+  .mini__img--three,
+  .mini__img--four,
+  .mini__img--five {
     /* Обложка карточки */
     height: 284px;
     width: 100%;
