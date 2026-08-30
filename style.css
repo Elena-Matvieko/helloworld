@@ -410,7 +410,7 @@ span {
 }
 
 .bloc-catalog {
-  padding: 94px 119px 46px 120px;
+  padding: 94px 119px 144px 120px;
   opacity: 1;
   left: 0px;
   top: 800px;
@@ -458,11 +458,13 @@ span {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  transition: transform 0.3s ease; /* Плавное масштабирование */
+  transition: transform 0.3s ease;
+  /* Плавное масштабирование */
 }
 
 .card:hover {
-  transform: scale(1.05); /* Увеличение на 5% */
+  transform: scale(1.05);
+  /* Увеличение на 5% */
 }
 
 .card--one,
@@ -756,7 +758,7 @@ span {
   position: absolute;
   padding-top: 47px;
   width: 35.15px;
-  right: 260px;
+  right: 123px;
   transform: rotate(7.08deg);
 }
 
@@ -764,7 +766,7 @@ span {
   position: absolute;
   padding-top: 77px;
   width: 68.86px;
-  right: 160px;
+  right: 44px;
   transform: rotate(5.45deg);
 }
 
@@ -1027,37 +1029,38 @@ span {
 
 .mini-bloc__star--12 {
   position: absolute;
+  padding-top: 10px;
   width: 69px;
   height: 69px;
-  right: 160px;
-  margin-bottom: 65px;
+  right: 52px;
 }
 
 .mini-bloc__star--9 {
   position: absolute;
   width: 41px;
   height: 41px;
-  right: 260px;
+  right: 150px;
+  top: 5640Px;
 }
 
 .footer {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
   background: #BDED35;
-  margin-top: 144px;
   width: 100%;
 }
 
 .footer__text {
-  padding: 61px 578px 60px 578px;
+  padding: 61px 60px;
   left: calc(50% - 142.5px + 0.5px);
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
   line-height: 29px;
   display: flex;
-  align-items: center;
+  justify-content: center;
   text-align: center;
   color: #000000;
-  justify-content: center;
 }
 
 /* Ключевые кадры анимации */
@@ -1118,6 +1121,7 @@ span {
     height: 196px;
     font-size: 40px;
     line-height: 1.4em;
+    margin: 0 auto;
     text-align: center;
   }
   /* Параграф внутри текста корзины */
@@ -1127,12 +1131,13 @@ span {
     font-size: 16px;
     line-height: 1.6em;
     text-align: center;
+    margin: 0 auto;
   }
   /* Кнопка: растянута на всю ширину родителя */
   .cart-text__button {
     width: 285px;
     height: 55px;
-    padding: 16px 24px 28px;
+    padding: 16px 103px 16px 103px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1416,7 +1421,5 @@ span {
   .footer__text {
     padding: 40px 92px 40px 93px;
     font-size: 16px;
-    width: 375px;
-    height: 100px;
   }
 }/*# sourceMappingURL=style.css.map */

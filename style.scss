@@ -378,7 +378,7 @@ span {
   width: 100%;
   /* Ключевое изменение */
   background: #202027;
-  
+
 }
 
 .bloc__Start-6 {
@@ -415,7 +415,7 @@ span {
 }
 
 .bloc-catalog {
-  padding: 94px 119px 46px 120px;
+  padding: 94px 119px 144px 120px;
   opacity: 1;
   left: 0px;
   top: 800px;
@@ -458,7 +458,7 @@ span {
   justify-content: center;
   padding-left: calc(50% - 600px);
   padding-right: calc(50% - 600px);
-  
+
 }
 
 .card {
@@ -466,12 +466,16 @@ span {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  transition: transform 0.3s ease; /* Плавное масштабирование */
+  transition: transform 0.3s ease;
+  /* Плавное масштабирование */
 
 }
+
 .card:hover {
-  transform: scale(1.05); /* Увеличение на 5% */
+  transform: scale(1.05);
+  /* Увеличение на 5% */
 }
+
 .card--one,
 .card--two {
   z-index: 1000;
@@ -482,17 +486,17 @@ span {
   flex-direction: column;
   align-items: flex-start;
   transform: translateY(-40px);
- /* width: 378px;*/
- 
+  /* width: 378px;*/
+
 }
 
 .card--four {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
- 
+
   /*width: 378px;*/
- 
+
 }
 
 .bloc-card_5 {
@@ -547,9 +551,9 @@ span {
   flex-grow: 0;
 }
 
-.card__img4 { 
+.card__img4 {
   width: 100%;
- height: 314px;
+  height: 314px;
   background-image: url("./img/igra_5.jpg");
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
@@ -766,7 +770,7 @@ span {
   position: absolute;
   padding-top: 47px;
   width: 35.15px;
-  right: 260px;
+  right: 123px;
   transform: rotate(7.08deg);
 }
 
@@ -774,7 +778,7 @@ span {
   position: absolute;
   padding-top: 77px;
   width: 68.86px;
-  right: 160px;
+  right: 44px;
   transform: rotate(5.45deg);
 }
 
@@ -876,7 +880,7 @@ span {
   border-bottom-right-radius: 30px;
 }
 
-.mini__img--one{
+.mini__img--one {
   /* Обложка карточки */
   width: 50%;
   height: 500px;
@@ -1038,36 +1042,40 @@ span {
 
 .mini-bloc__star--12 {
   position: absolute;
+  padding-top: 10px;
   width: 69px;
   height: 69px;
-  right: 160px;
-  margin-bottom: 65px;
+  right: 52px;
+
 }
 
-.mini-bloc__star--9{
+.mini-bloc__star--9 {
   position: absolute;
   width: 41px;
   height: 41px;
-  right: 260px;
- }
+  right: 150px;
+  top: 5640Px;
+}
 
 .footer {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
   background: #BDED35;
-  margin-top: 144px;
   width: 100%;
 }
+
 .footer__text {
-  padding: 61px 578px 60px 578px;
+  padding: 61px 60px;
   left: calc(50% - 142.5px + 0.5px);
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
   line-height: 29px;
   display: flex;
-  align-items: center;
+  justify-content: center;
   text-align: center;
   color: #000000;
-  justify-content: center;
+
 }
 
 
