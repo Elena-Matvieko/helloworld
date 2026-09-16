@@ -36,13 +36,15 @@ body {
 }
 
 .cart__vector {
+  right: -150px;
+  border-width: 1px;
   position: absolute;
   width: 413px;
   height: 528px;
   transform: rotate(0deg);
   opacity: 1;
-  right: 0;
-  border-width: 1px;
+  top: -5.63%;
+  bottom: 92.27%;
 }
 
 .cart__Start-4 {
@@ -55,7 +57,7 @@ body {
 .cart__vector-4780 {
   position: absolute;
   top: -10px;
-  right: 276px;
+  right: 157px;
 }
 
 .cart__Start-5 {
@@ -67,7 +69,7 @@ body {
 
 .cart__vector-4781 {
   position: absolute;
-  right: 219px;
+  right: 107px;
   top: 254px;
 }
 
@@ -80,7 +82,7 @@ body {
 
 .cart__vector-4782 {
   position: absolute;
-  right: 15px;
+  right: -130px;
   top: 379px;
 }
 
@@ -94,13 +96,13 @@ body {
 .cart__vector-4788 {
   position: absolute;
   /*width: 80px;*/
-  right: 122px;
+  right: -1px;
   top: 468px;
 }
 
 .cart__vector-4791 {
   position: absolute;
-  right: 70px;
+  right: -30px;
   top: 663px;
 }
 
@@ -138,8 +140,6 @@ body {
   /* Тебе предстоит пройти несколько увлекательных игр. Если готов, нажимай «Поехали!» и приступай. */
   width: 720px;
   height: 64px;
-  font-family: "Montserrat";
-  font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 32px;
@@ -166,8 +166,7 @@ body {
   padding-left: 28px;
   border-radius: 60px;
   background: rgb(32, 32, 39);
-  cursor: pointer;
-  /* Улучшает UX */
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 span {
@@ -776,6 +775,7 @@ span {
 }
 
 .mini-name1 {
+  padding-top: 64px;
   padding-bottom: 42px;
   /* Мини-игры */
   font-weight: 700;
@@ -1081,17 +1081,34 @@ span {
 }
 /* Стили для экранов с шириной до 767 пикселей */
 @media (max-width: 767px) {
-  /* Этот код сработает только на мобильных устройствах */
+  .cart-text__button:hover {
+    transform: translateY(-2px);
+  }
+  .cart-text__button:active,
+  .cart-text__button:focus,
+  .mini__button:active,
+  .mini__button:focus,
+  .mini__button1:active,
+  .mini__button1:focus,
+  .mini__button2:active,
+  .mini__button2:focus,
+  .mini__button3:active,
+  .mini__button3:focus,
+  .mini__button4:active,
+  .mini__button4:focus,
+  .mini__button5:active,
+  .mini__button5:focus {
+    outline: none;
+    /* Убираем синюю рамку вокруг кнопки */
+    transform: translateY(0);
+  }
   .cart {
     padding-left: calc(50% - 171.5px);
     padding-right: calc(50% - 171.5px);
   }
-  .container {
-    max-width: 100%;
-    /* Занимает всю доступную ширину */
-  }
   .cart__vector {
     position: absolute;
+    right: -10px;
     width: 223px;
     height: 238px;
   }
@@ -1104,21 +1121,18 @@ span {
   }
   .cart__Start-4 {
     width: 39px;
-    left: 304px;
-    top: 580px;
+    right: 0px;
+    top: 638px;
   }
   .cart__Start-5 {
     width: 18px;
-    left: 273px;
-    top: 557px;
+    right: 50px;
+    top: 625px;
   }
   /* Текст корзины */
   .cart-text {
     padding-left: calc(50% - 171.5px);
     padding-right: calc(50% - 171.5px);
-    padding-top: 147px;
-    padding-bottom: 131px;
-    gap: 36px;
   }
   /* Заголовок H1 внутри текста корзины */
   .cart-text h1 {
@@ -1140,6 +1154,7 @@ span {
   }
   /* Кнопка: растянута на всю ширину родителя */
   .cart-text__button {
+    margin-top: 36px;
     width: 285px;
     height: 55px;
     padding: 16px 103px 16px 103px;
@@ -1156,6 +1171,7 @@ span {
     padding: 16px 0px 16px 9px;
     padding-left: calc(50% - 171.5px);
     padding-right: calc(50% - 171.5px);
+    overflow: hidden;
   }
   .bloc-name {
     display: none;
@@ -1212,7 +1228,6 @@ span {
     max-width: 100%;
     /* Не вылезать за края экрана */
     padding: 16px 24px;
-    top: 636px;
   }
   .lenta-content {
     gap: 6px;
@@ -1267,8 +1282,6 @@ span {
     height: 19px;
   }
   .bloc {
-    width: 100%;
-    /* Ключевое изменение */
     background: #202027;
   }
   .bloc__Start-6 {

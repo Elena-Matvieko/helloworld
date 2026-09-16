@@ -14,8 +14,7 @@
 </head>
 
 <body>
-
-    <section class="cart ">
+        <section class="cart ">
         <div class="container">
             <img class="cart__vector" src="./img/Vector.png" alt="Вектор">
             <img class="cart__Start-4" src="./img/Star_4.png" alt="Звезда">
@@ -33,7 +32,7 @@
             <p>Тебе предстоит пройти несколько увлекательных игр.
                 Если готов, нажимай <span>«Поехали!»</span> и <span>приступай</span>.
             </p>
-            <a href="#games" class="cart-text__button">Поехали!</a>
+            <a href="javascript:void(0);" id="startButton" class="cart-text__button">Поехали!</a>
         </div>
     </section>
     
@@ -134,14 +133,14 @@
         <section class="mini-bloc">
             <div class="mini">
             <img class="mini__Start-7" src="./img/Star_7.png" alt="Звезда">
-            <a class="mini-name1">Мини-игры</a>
+            <a class="mini-name1" id="minigames-section">Мини-игры</a>
             <img class="mini__Start-8" src="./img/Star_8.png" alt="Звезда">
             <div class="mini__card">
                 <div class="mini__text">
                     <div id="number" class="mini__soft">Угадай число</div>
                     <p class="mini__info">Попробуй угадать случайное<br>число от 1 до 100.</p>
                     <a href="#" class="mini__button">Играть!</a>
-                </div>
+                </div> 
                 <div class="mini__img mini__igra1">
                     <a href="#" class="mini__igra1"></a>
                 </div>
@@ -202,6 +201,43 @@
             <img class="mini-bloc__star mini-bloc__star--9" src="./img/Star_9.png" alt="Звезда">
         </section>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const button = document.getElementById('startButton');
+            
+            if (!button) return;
+       
+            // Функция для плавного скролла к любому элементу
+            const scrollToElement = (elementSelector) => {
+                const targetBlock = document.querySelector(elementSelector);
+                if (targetBlock) {
+                    targetBlock.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Обновляем адресную строку без перезагрузки страницы (опционально)
+                    history.pushState(null, null, elementSelector);
+                }
+            };
+       
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+                
+                // Точка перелома (breakpoint): 
+                // Обычно мобильные устройства имеют ширину до 768px или 992px.
+                const isMobile = window.innerWidth <= 768;
+       
+                if (isMobile) {
+                    // Если мобильная версия -> скроллим к Мини-играм
+                    scrollToElement('#minigames-section');
+                } else {
+                    // Если компьютерная версия -> скроллим к Об играх
+                    scrollToElement('#games');
+                }
+            });
+        });
+       </script>
     <footer class="footer">
         <div class="footer__info">
             <p class="footer__text">Все права защищены.</p>
