@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простая викторина</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+     <script>
+        // Массив вопросов и правильных ответов
+        const quiz = [
+            {
+                question: "Какой цвет небо?",
+                options: ["1. Красный", "2. Синий", "3. Зеленый"],
+                correctAnswer: 2 // номер правильного ответа
+            },
+            {
+                question: "Сколько дней в неделе?",
+                options: ["1. Шесть", "2. Семь", "3. Восемь"],
+                correctAnswer: 2
+            },
+            {
+                question: "Сколько у человека пальцев на одной руке?",
+                options: ["1. Четыре", "2. Пять", "3. Шесть"],
+                correctAnswer: 2
+            }
+        ];
+
+        // Счетчик правильных ответов 
+        let correctCount = 0; 
+        // Проходим циклом по каждому объекту в массиве quiz 
+        for (let i = 0; i < quiz.length; i++) {
+            const currentQuestion = quiz[i]; 
+            // Формируем текст вопроса с вариантами ответов для пользователя 
+            let questionText = currentQuestion.question + "\n\n"; 
+            for (let j = 0; j < currentQuestion.options.length; j++) {
+                 questionText += currentQuestion.options[j] + "\n"; 
+                } 
+                // Запрашиваем ответ у пользователя. 
+                // prompt() возвращает строку, поэтому превращаем её в число. 
+                const userAnswer = parseInt(prompt(questionText)); 
+                // Проверяем, ввел ли пользователь что-то и совпадает ли число с правильным ответом 
+                if (!isNaN(userAnswer) && userAnswer === currentQuestion.correctAnswer) {
+                     correctCount++;
+
+                 } 
+                // Если пользователь нажал "Отмена" или закрыл окно, prompt() вернет null.
+                 // parseInt(null) дает NaN, и условие выше не сработает. 
+                }
+                  // Выводим финальный результат 
+                  alert(`Вы ответили правильно на ${correctCount} из ${quiz.length} вопросов.`); 
+                  </script>
+
+        
+    </script>
+</body>
+
+</html>
