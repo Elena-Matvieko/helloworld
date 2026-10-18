@@ -40,19 +40,30 @@
             const currentQuestion = quiz[i]; 
             // Формируем текст вопроса с вариантами ответов для пользователя 
             let questionText = currentQuestion.question + "\n\n"; 
+
             for (let j = 0; j < currentQuestion.options.length; j++) {
                  questionText += currentQuestion.options[j] + "\n"; 
-                } 
-                // Запрашиваем ответ у пользователя. 
-                // prompt() возвращает строку, поэтому превращаем её в число. 
-                const userAnswer = parseInt(prompt(questionText)); 
-                // Проверяем, ввел ли пользователь что-то и совпадает ли число с правильным ответом 
-                if (!isNaN(userAnswer) && userAnswer === currentQuestion.correctAnswer) {
-                     correctCount++;
+                }
+                let userInput = prompt (questionText);
+
+                // Проверка на отмену или пустой ввод.
+                if (userInput === null || userInput.trim() === ""){
+                    alert ("Ответ не введен. Попробуйте еще раз.");
+                    i--;// Возвращаемся к этому же вопросу, не увеличивая счетчик цикла
+                    continue;
+                }
+                
+                const userAnswer = parseInt(userInput); 
+                if (isNaN(userAnswer) || userAnswer < 1|| userAnswer > currentQuestion.options.length) {
+                    alert("Некорректный ввод. Введите номер от 1 до " + currentQuestion.options.length);
+                     i--;// Возвращаемся к этому же вопросу
+                     continue;
 
                  } 
-                // Если пользователь нажал "Отмена" или закрыл окно, prompt() вернет null.
-                 // parseInt(null) дает NaN, и условие выше не сработает. 
+                // Проверка на правильный ответ.
+                if (userAnswer ===currentQuestion.correctAnswer){
+                    correctCount++;
+                }
                 }
                   // Выводим финальный результат 
                   alert(`Вы ответили правильно на ${correctCount} из ${quiz.length} вопросов.`); 
