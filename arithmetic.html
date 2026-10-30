@@ -1,5 +1,7 @@
-<!DOCTYPE html>
+
+!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,75 +12,54 @@
         rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-    <script>
-        let currentAnswer = 0;
-         function generateProblem() { 
-            const operations = [
-                 { symbol: '+', func: (a, b) => a + b },
-                  { symbol: '-', func: (a, b) => a - b },
-                   { symbol: '*', func: (a, b) => a * b }, 
-                   { symbol: '/', func: (a, b) => a / b } 
-                ];
-                 const opData = operations[Math.floor(Math.random() * operations.length)];
-                  let a, b;
-                   switch (opData.symbol) {
-                     case '+':
-                     a = Math.floor(Math.random() * 50) + 1;
-                     b = Math.floor(Math.random() * 50) + 1;
 
-                      break;
-                       case '-':
-                       a = Math.floor(Math.random() * 50) + 1;
-                        b = Math.floor(Math.random() * a) + 1; 
-                        break; 
-                        case '*':
-                         a = Math.floor(Math.random() * 12) + 1;
-                          b = Math.floor(Math.random() * 12) + 1; 
-                          break; 
-                          case '/':
-                           b = Math.floor(Math.random() * 12) + 1;
-                            currentAnswer = Math.floor(Math.random() * 12) + 1;
-                             a = b * currentAnswer;
-                              return { text: `${a} ${opData.symbol} ${b}`,
-                               answer: currentAnswer };
-                             } 
-                             currentAnswer = opData.func(a, b);
-                              return { text: `${a} ${opData.symbol} ${b}`,
-                               answer: currentAnswer };
-                             }
-                              function renderProblem() {
-                                 const { text } = generateProblem();
-                                  document.getElementById('problem').innerText = text; 
-                                  document.getElementById('userInput').value = '';
-                                   document.getElementById('result').innerText = '';
-                                    document.getElementById('userInput').focus(); 
-                                }
-                                 function checkAnswer() { 
-                                    const userInput = parseFloat(document.getElementById('userInput').value);
-                                     const resultDiv = document.getElementById('result');
-                                      if (isNaN(userInput)) { 
-                                      resultDiv.innerText = 'Введите число!'; 
-                                      resultDiv.className = 'wrong';
-                                       return; 
-                                    } 
-                                    if (Math.abs(userInput - currentAnswer) < 0.001) {
-                                         resultDiv.innerText = 'Верно! Молодец!';
-                                          resultDiv.className = 'correct'; 
-                                        } else {
-                                            resultDiv.innerText = `Ошибка! Правильный ответ: ${currentAnswer}`;
-                                             resultDiv.className = 'wrong'; 
-                                            } 
-                                        } // Назначение обработчиков событий
-                                         document.getElementById('checkBtn').addEventListener('click', checkAnswer);
-                                          document.getElementById('newBtn').addEventListener('click', renderProblem); 
-                                          document.getElementById('userInput').addEventListener('keydown', function(e) {
-                                             if (e.key === 'Enter') { 
-                                                checkAnswer();
-                                             }
-                                             }); 
-                                             // Запуск первой задачи 
-                                             renderProblem();
-    </script>
-</body>
+<body>
+
+
+<script>
+  function generateExample() {
+      const a = Math.floor(Math.random() * 100) + 1;
+      const b = Math.floor(Math.random() * 100) + 1;
+      
+      // Исправлено: добавлен оператор '*'
+      const operation = Math.random() < 0.5 ? '+' : 
+                        (Math.random() < 0.5 ? '-' : 
+                        (Math.random() < 0.5 ? '*' : '/'));
+      
+      let result;
+      switch (operation) {
+          case '+': result = a + b; break;
+          case '-': result = a - b; break;
+          case '*': result = a * b; break;
+          case '/': 
+              // Чтобы избежать бесконечных дробей, можно округлять
+              result = (a / b).toFixed(2); 
+              break;
+      }
+
+      // Возвращаем объект: и текст задачи, и правильный ответ
+      return {
+          question: `Сколько будет ${a} ${operation} ${b}?`,
+          answer: result
+      };
+  }
+
+  function main() {
+      const example = generateExample();
+      
+      // Запрос ответа
+      const userAnswer = prompt(example.question);
+
+      if (userAnswer === null) return; // Если нажал "Отмена"
+
+      // Сравнение: приводим строку от prompt к числу (или ответ к строке)
+      if (Number(userAnswer) == example.answer) { 
+          alert("Верно!");
+      } else {
+          alert("Ошибка. Правильный ответ: " + example.answer);
+      }
+  }
+
+  main();
+</script>
 </html>
