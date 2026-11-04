@@ -39,7 +39,7 @@ body {
 }
 
 .cart__vector {
-  right: -150px;
+  right: -2px; // -150 px
   border-width: 1px;
   position: absolute;
   width: 413px;
@@ -60,7 +60,7 @@ body {
 .cart__vector-4780 {
   position: absolute;
   top: -10px;
-  right: 157px;
+  right: 257px;
 }
 
 .cart__Start-5 {
@@ -72,8 +72,11 @@ body {
 
 .cart__vector-4781 {
   position: absolute;
-  right: 107px;
-  top: 254px;
+  right: 258px;
+  top: 268px;
+
+  // right: 107px;
+  // top: 254px;
 }
 
 .cart__Start-3 {
@@ -85,8 +88,10 @@ body {
 
 .cart__vector-4782 {
   position: absolute;
-  right: -130px;
-  top: 379px;
+  right: -2px;
+  top: 328px;
+  // right: -130px;
+  // top: 379px;
 }
 
 .cart__Start-2 {
@@ -98,9 +103,11 @@ body {
 
 .cart__vector-4788 {
   position: absolute;
+  right: 60px;
+    top: 710px;
   /*width: 80px;*/
-  right: -1px;
-  top: 468px;
+  // right: -1px;
+  // top: 468px;
 }
 
 .cart__vector-4791 {
@@ -1043,6 +1050,7 @@ span {
   gap: 10px;
   width: 247px;
   height: 66px;
+  font-size: 24px;
   background: #202027;
   border-radius: 60px;
 }
