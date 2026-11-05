@@ -1,4 +1,5 @@
-@charset "UTF-8";
+
+
 * {
   padding: 0;
   margin: 0;
@@ -30,17 +31,18 @@ body {
 }
 
 .container {
-  position: relative;
+ 
+  /* position: relative; */
   width: 100%;
   background: #E1FF8F;
 }
 
 .cart__vector {
-  right: -150px;
+  right: -1px;
   border-width: 1px;
   position: absolute;
-  width: 413px;
-  height: 528px;
+  /* width: 413px;
+  height: 528px; */
   transform: rotate(0deg);
   opacity: 1;
   top: -5.63%;
@@ -56,8 +58,8 @@ body {
 
 .cart__vector-4780 {
   position: absolute;
-  top: -10px;
-  right: 157px;
+  top: -30px;
+  right: 258px;
 }
 
 .cart__Start-5 {
@@ -69,8 +71,8 @@ body {
 
 .cart__vector-4781 {
   position: absolute;
-  right: 107px;
-  top: 254px;
+  right: 258px;
+  top: 248px;
 }
 
 .cart__Start-3 {
@@ -82,8 +84,8 @@ body {
 
 .cart__vector-4782 {
   position: absolute;
-  right: -130px;
-  top: 379px;
+  right: -2px;
+  top: 328px;
 }
 
 .cart__Start-2 {
@@ -96,13 +98,13 @@ body {
 .cart__vector-4788 {
   position: absolute;
   /*width: 80px;*/
-  right: -1px;
-  top: 468px;
+  right: 70px;
+  top: 510px;
 }
 
 .cart__vector-4791 {
   position: absolute;
-  right: -30px;
+  right: 30px;
   top: 663px;
 }
 
@@ -1024,10 +1026,10 @@ span {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 16px 28px;
   gap: 10px;
   width: 247px;
   height: 66px;
+  font-size: 24px;
   background: #202027;
   border-radius: 60px;
 }
@@ -1074,16 +1076,19 @@ span {
     transform: translateX(100%);
     /* Стартовая позиция - сдвинут вправо на свою ширину */
   }
+
   to {
     transform: translateX(-100%);
     /* Конечная позиция - сдвинут влево на свою ширину */
   }
 }
+
 /* Стили для экранов с шириной до 767 пикселей */
 @media (max-width: 767px) {
   .cart-text__button:hover {
     transform: translateY(-2px);
   }
+
   .cart-text__button:active,
   .cart-text__button:focus,
   .mini__button:active,
@@ -1102,14 +1107,17 @@ span {
     /* Убираем синюю рамку вокруг кнопки */
     transform: translateY(0);
   }
+
   .cart {
     padding-left: calc(50% - 171.5px);
     padding-right: calc(50% - 171.5px);
   }
+
   .container {
     max-width: 100%;
     /* Занимает всю доступную ширину */
   }
+
   .cart__vector {
     position: absolute;
     top: -25px;
@@ -1117,6 +1125,7 @@ span {
     width: 223px;
     height: 238px;
   }
+
   .cart__vector-4780,
   .cart__vector-4781,
   .cart__vector-4782,
@@ -1124,16 +1133,19 @@ span {
   .cart__vector-4791 {
     display: none;
   }
+
   .cart__Start-4 {
     width: 39px;
     right: 0px;
     top: 580px;
   }
+
   .cart__Start-5 {
     width: 18px;
     right: 50px;
     top: 567px;
   }
+
   /* Текст корзины */
   .cart-text {
     padding-left: calc(50% - 171.5px);
@@ -1141,6 +1153,7 @@ span {
     padding-top: 147px;
     padding-bottom: 131px;
   }
+
   /* Заголовок H1 внутри текста корзины */
   .cart-text h1 {
     width: 262px;
@@ -1150,6 +1163,7 @@ span {
     margin: 0 auto;
     text-align: center;
   }
+
   /* Параграф внутри текста корзины */
   .cart-text p {
     width: 296px;
@@ -1159,6 +1173,7 @@ span {
     text-align: center;
     margin: 0 auto;
   }
+
   /* Кнопка: растянута на всю ширину родителя */
   .cart-text__button {
     font-size: 16px;
@@ -1172,24 +1187,30 @@ span {
     margin: 0 auto;
     /* Центрирует кнопку относительно родителя */
   }
+
   span {
     font-size: 16px;
   }
+
   .bloc-catalog {
     padding: 16px 0px 16px 9px;
     padding-left: calc(50% - 171.5px);
     padding-right: calc(50% - 171.5px);
     overflow: hidden;
   }
+
   .bloc-name {
     display: none;
   }
+
   .bloc-soft {
     display: none;
   }
+
   .card-bloc {
     display: none;
   }
+
   .card {
     flex-direction: column;
     /* Вертикальное расположение элементов */
@@ -1198,6 +1219,7 @@ span {
     height: auto;
     /* Высота карточки подстраивается под контент */
   }
+
   /* 3. Стили для изображения внутри карточки */
   .card__img,
   .card__img1,
@@ -1212,9 +1234,10 @@ span {
     border-radius: 30px 30px 0 0;
     /* Скругляем только верхние углы */
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     /* Изображение будет масштабироваться без искажений */
   }
+
   /* 4. Стили для текстового блока внутри карточки */
   .card__text,
   .card__text--one,
@@ -1229,6 +1252,7 @@ span {
     border-radius: 0 0 30px 30px;
     /* Скругляем только нижние углы */
   }
+
   .lenta {
     top: 649px;
     position: absolute;
@@ -1238,129 +1262,159 @@ span {
     /* Не вылезать за края экрана */
     padding: 16px 24px;
   }
+
   .lenta-content {
     gap: 6px;
   }
+
   .lenta-content__item-1 {
     /* Викторина */
     height: 18px;
     font-size: 16px;
   }
+
   .lenta-content__Start {
     width: 19px;
     height: 19px;
   }
+
   .lenta-content__item-2 {
     height: 18px;
     font-size: 16px;
   }
+
   .lenta-content__Start-1 {
     width: 19px;
     height: 19px;
   }
+
   .lenta-content__item-3 {
     height: 18px;
     font-size: 16px;
   }
+
   .lenta-content__Start-2 {
     width: 19px;
     height: 19px;
   }
+
   .lenta-content__item-4 {
     height: 18px;
     font-size: 16px;
   }
+
   .lenta-content__Start-3 {
     width: 19px;
     height: 19px;
   }
+
   .lenta-content__item-5 {
     height: 18px;
     font-size: 16px;
   }
+
   .lenta-content__Start-4 {
     width: 19px;
     height: 19px;
   }
+
   .lenta-content__item-6 {
     height: 18px;
     font-size: 16px;
   }
+
   .lenta-content__Start-5 {
     width: 19px;
     height: 19px;
   }
+
   .bloc {
     background: #202027;
   }
+
   .bloc__Start-6 {
     display: none;
   }
+
   .bloc__Start-11 {
     display: none;
   }
+
   .bloc__Start-12 {
     display: none;
   }
+
   .mini {
     gap: 24px;
     padding-left: calc(50% - 171.5px);
     padding-right: calc(50% - 171.5px);
   }
+
   .mini__Start-7 {
     display: none;
   }
+
   .mini__Start-8 {
     display: none;
   }
+
   .mini-bloc__star--12 {
     display: none;
   }
+
   .mini-bloc__star--9 {
     display: none;
   }
+
   .mini__card {
     display: flex;
     flex-direction: column-reverse;
     align-items: flex-start;
     height: 528px;
   }
+
   .mini__card--one {
     display: flex;
     flex-direction: column-reverse;
     align-items: flex-start;
     height: 567px;
   }
+
   .mini__card--two {
     display: flex;
     flex-direction: column-reverse;
     align-items: flex-start;
     height: 567px;
   }
+
   .mini__card--three {
     display: flex;
     flex-direction: column-reverse;
     align-items: flex-start;
     height: 606px;
   }
+
   .mini__card--four {
     display: flex;
     flex-direction: column-reverse;
     align-items: flex-start;
     height: 567px;
   }
+
   .mini__card--five {
     display: flex;
     flex-direction: column-reverse;
     align-items: flex-start;
     height: 626px;
   }
+
   .mini-name1 {
     padding-top: 48px;
     padding-bottom: 24px;
     /* Мини-игры */
     font-size: 40px;
   }
+
   .mini__img,
   .mini__img--one,
   .mini__img--two,
@@ -1372,6 +1426,7 @@ span {
     width: 100%;
     border-top-left-radius: 30px;
   }
+
   .mini__text {
     width: 100%;
     /* Занимает всю ширину карточки, а не 249px */
@@ -1384,32 +1439,38 @@ span {
     /* Боковые отступы как у текстовых блоков ниже */
     box-sizing: border-box;
   }
+
   .mini__text--one {
     /*padding: 48px;*/
     box-sizing: border-box;
     padding: 29px 29px 29px 32px;
   }
+
   .mini__text--two {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 29px 29px 29px 32px;
   }
+
   .mini__text--three {
     display: flex;
     flex-direction: column;
     padding: 29px 29px 29px 32px;
   }
+
   .mini__text--four {
     display: flex;
     flex-direction: column;
     padding: 29px 29px 29px 32px;
   }
+
   .mini__text--five {
     display: flex;
     flex-direction: column;
     padding: 29px 29px 29px 32px;
   }
+
   .mini__soft,
   .mini__soft1,
   .mini__soft2,
@@ -1420,6 +1481,7 @@ span {
     width: 284px;
     font-size: 32px;
   }
+
   .mini__info,
   .mini__info1,
   .mini__info2,
@@ -1430,6 +1492,7 @@ span {
     font-size: 16px;
     padding-bottom: 32px;
   }
+
   .mini__button,
   .mini__button1,
   .mini__button2,
@@ -1439,6 +1502,7 @@ span {
     width: 285px;
     height: 55px;
   }
+
   .footer {
     padding-left: calc(50% - 171.5px);
     padding-right: calc(50% - 171.5px);
@@ -1446,8 +1510,11 @@ span {
     font-size: 16px;
     line-height: 20px;
   }
+
   .footer__text {
     font-size: 16px;
     padding: 40px 40px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

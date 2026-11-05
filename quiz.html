@@ -11,85 +11,65 @@
         <link rel="stylesheet" href="./style.css">
     </head>
 <body>
-    <script>
-    // Массив вопросов и правильных ответов
-const quiz = [
-    {
-        question: "Какой цвет небо?",
-        options: ["1. Красный", "2. Синий", "3. Зеленый"],
-        correctAnswer: 2 // номер правильного ответа
-    },
-    {
-        question: "Сколько дней в неделе?",
-        options: ["1. Шесть", "2. Семь", "3. Восемь"],
-        correctAnswer: 2
-    },
-    {
-        question: "Сколько у человека пальцев на одной руке?",
-        options: ["1. Четыре", "2. Пять", "3. Шесть"],
-        correctAnswer: 2
-    }
-];
+    <script> 
+        // Массив вопросов 
+        const quiz = [
+             { question: "Какой цвет небо?",
+              options: ["1. Красный", "2. Синий", "3. Зеленый"],
+               correctAnswer: 2 
+               },
+                { question: "Сколько дней в неделе?",
+                 options: ["1. Шесть", "2. Семь", "3. Восемь"],
+                  correctAnswer: 2 
+                  },
+                   { question: "Сколько у человека пальцев на одной руке?",
+                    options: ["1. Четыре", "2. Пять", "3. Шесть"],
+                     correctAnswer: 2 
+                     }
+                      ]; 
+                      // Главная функция викторины 
+                      function startQuiz() {
+                         let correctCount = 0;
+                         
+                         for (let i = 0; i < quiz.length; i++) {
+                             const currentQuestion = quiz[i];
+                              let questionText = currentQuestion.question + "\n\n";
+                             for (let j = 0; j < currentQuestion.options.length; j++){ 
+                                questionText += currentQuestion.options[j] + "\n"; 
+                            } 
+                            let userInput;
+                            let userAnswer; 
+                            // Цикл валидации для текущего вопроса 
+                            while (true) {
+                                 userInput = prompt(questionText); 
+                                 // 1. Проверка на отмену (Cancel)
+                                  if (userInput === null) {
+                                     alert(`Игра прервана. Вы ответили правильно на ${correctCount} из ${i} вопросов.`); 
+                                     return; // Теперь return легален, так как мы внутри функции 
+                                    } 
+                                     // 2. Проверка на пустой ввод 
+                                     if (userInput.trim() === "") {
+                                         alert("Пустой ввод не принимается. Попробуйте еще раз.");
+                                          continue;
+                                         } 
+                                         userAnswer = parseInt(userInput); 
 
-// Счетчик правильных ответов 
-let correctCount = 0; 
-
-// Проходим циклом по каждому объекту в массиве quiz 
-for (let i = 0; i < quiz.length; i++) {
-    const currentQuestion = quiz[i]; 
+                                         // 3. Проверка на число и диапазон 
+                                         if (isNaN(userAnswer) || userAnswer < 1 || userAnswer > currentQuestion.options.length) {
+                                             alert(`Некорректный ввод. Введите число от 1 до ${currentQuestion.options.length}.`);
+                                              continue;
+                                             } 
+                                             // Если всё хорошо, выходим из цикла валидации
+                                              break;
+                                             } // Проверка ответа (выполняется только если не было return) 
+                                             if (userAnswer === currentQuestion.correctAnswer){ 
+                                                correctCount++;
+                                                 }
+                                                  } alert(`Викторина завершена! Вы ответили правильно на ${correctCount} из ${quiz.length} вопросов.`);
+                                                   } 
+                                                   // Запускаем игру 
+                                                   startQuiz();
+                                                    </script>
     
-    // Формируем текст вопроса с вариантами ответов для пользователя 
-    let questionText = currentQuestion.question + "\n\n"; 
-    for (let j = 0; j < currentQuestion.options.length; j++) {
-        questionText += currentQuestion.options[j] + "\n"; 
-    }
-
-    let userInput;
-    let userAnswer;
-
-    // === БЛОК ВАЛИДАЦИИ ВВОДА ===
-    // Используем бесконечный цикл, чтобы не пустить пользователя дальше без корректного ответа
-    while (true) {
-        userInput = prompt(questionText);
-
-        // 1. Проверка на отмену (нажатие Cancel/Esc)
-        if (userInput === null) {
-            // Выводим текущий счет (i - это количество уже заданных вопросов, 
-            // но так как текущий еще не засчитан, правильно писать i)
-            alert(`Игра прервана. Вы ответили правильно на ${correctCount} из ${i} вопросов.`);
-            // Команда return полностью останавливает выполнение скрипта
-            return; 
-        }
-
-        // 2. Проверка на пустой ввод (только пробелы)
-        if (userInput.trim() === "") {
-            alert("Пожалуйста, введите ответ. Пустые строки не принимаются.");
-            // continue перезапускает цикл while, оставаясь на том же вопросе (i не меняется)
-            continue; 
-        }
-
-        // Преобразуем ввод в число
-        userAnswer = parseInt(userInput); 
-
-        // 3. Проверка на то, является ли ввод числом и входит ли оно в диапазон вариантов
-        if (isNaN(userAnswer) || userAnswer < 1 || userAnswer > currentQuestion.options.length) {
-            alert(`Некорректный ввод. Введите число от 1 до ${currentQuestion.options.length}.`);
-            continue; // Повторяем запрос того же вопроса
-        }
-
-        // Если все проверки пройдены, выходим из цикла валидации
-        break; 
-    }
-    // === КОНЕЦ БЛОКА ВАЛИДАЦИИ ===
-
-    // Проверка на правильный ответ (теперь в userAnswer гарантированно лежит число от 1 до 3)
-    if (userAnswer === currentQuestion.correctAnswer){
-        correctCount++;
-    }
-}
-
-// Выводим финальный результат 
-alert(`Викторина завершена! Вы ответили правильно на ${correctCount} из ${quiz.length} вопросов.`);
-</script>
 </body>
 </html>
