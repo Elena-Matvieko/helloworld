@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простая арифметика</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+
+<script>
+  function generateExample() {
+      const a = Math.floor(Math.random() * 100) + 1;
+      const b = Math.floor(Math.random() * 100) + 1;
+      
+      // Исправлено: добавлен оператор '*'
+      const operation = Math.random() < 0.5 ? '+' : 
+                        (Math.random() < 0.5 ? '-' : 
+                        (Math.random() < 0.5 ? '*' : '/'));
+      
+      let result;
+      switch (operation) {
+          case '+': result = a + b; break;
+          case '-': result = a - b; break;
+          case '*': result = a * b; break;
+          case '/': 
+              // Чтобы избежать бесконечных дробей, можно округлять
+              result = (a / b).toFixed(2); 
+              break;
+      }
+
+      // Возвращаем объект: и текст задачи, и правильный ответ
+      return {
+          question: `Сколько будет ${a} ${operation} ${b}?`,
+          answer: result
+      };
+  }
+
+  function main() {
+      const example = generateExample();
+      
+      // Запрос ответа
+      const userAnswer = prompt(example.question);
+
+      if (userAnswer === null) return; // Если нажал "Отмена"
+
+      // Сравнение: приводим строку от prompt к числу (или ответ к строке)
+      if (Number(userAnswer) == example.answer) { 
+          alert("Верно!");
+      } else {
+          alert("Ошибка. Правильный ответ: " + example.answer);
+      }
+  }
+
+  main();
+</script>
+</html>

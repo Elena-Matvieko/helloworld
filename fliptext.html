@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Переверни текст</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+<body>
+    <h1>Введите фразу:</h1>
+    <input type="text" id="userInput" placeholder="Напишите что-нибудь...">
+    <button onclick="reverseText()">Перевернуть</button>
+
+    <div id="result"></div>
+
+    <script>
+function reverseText() {
+            // 1. Получаем текст от пользователя
+            const userInput = document.getElementById('userInput').value;
+
+            // 2. Переворачиваем текст
+            let reversedText = '';
+            for (let i = userInput.length - 1; i >= 0; i--) {
+                reversedText += userInput[i];
+            }
+        
+            // 3. Выводим результат
+            result.innerHTML = reversedText;
+            result.style.color = 'blue'; 
+        }
+    </script>
+</body>
+</html>

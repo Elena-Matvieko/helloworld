@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Простая викторина</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+<body>
+    <script> 
+        // Массив вопросов 
+        const quiz = [
+             { question: "Какой цвет небо?",
+              options: ["1. Красный", "2. Синий", "3. Зеленый"],
+               correctAnswer: 2 
+               },
+                { question: "Сколько дней в неделе?",
+                 options: ["1. Шесть", "2. Семь", "3. Восемь"],
+                  correctAnswer: 2 
+                  },
+                   { question: "Сколько у человека пальцев на одной руке?",
+                    options: ["1. Четыре", "2. Пять", "3. Шесть"],
+                     correctAnswer: 2 
+                     }
+                      ]; 
+                      // Главная функция викторины 
+                      function startQuiz() {
+                         let correctCount = 0;
+                         
+                         for (let i = 0; i < quiz.length; i++) {
+                             const currentQuestion = quiz[i];
+                              let questionText = currentQuestion.question + "\n\n";
+                             for (let j = 0; j < currentQuestion.options.length; j++){ 
+                                questionText += currentQuestion.options[j] + "\n"; 
+                            } 
+                            let userInput;
+                            let userAnswer; 
+                            // Цикл валидации для текущего вопроса 
+                            while (true) {
+                                 userInput = prompt(questionText); 
+                                 // 1. Проверка на отмену (Cancel)
+                                  if (userInput === null) {
+                                     alert(`Игра прервана. Вы ответили правильно на ${correctCount} из ${i} вопросов.`); 
+                                     return; // Теперь return легален, так как мы внутри функции 
+                                    } 
+                                     // 2. Проверка на пустой ввод 
+                                     if (userInput.trim() === "") {
+                                         alert("Пустой ввод не принимается. Попробуйте еще раз.");
+                                          continue;
+                                         } 
+                                         userAnswer = parseInt(userInput); 
+
+                                         // 3. Проверка на число и диапазон 
+                                         if (isNaN(userAnswer) || userAnswer < 1 || userAnswer > currentQuestion.options.length) {
+                                             alert(`Некорректный ввод. Введите число от 1 до ${currentQuestion.options.length}.`);
+                                              continue;
+                                             } 
+                                             // Если всё хорошо, выходим из цикла валидации
+                                              break;
+                                             } // Проверка ответа (выполняется только если не было return) 
+                                             if (userAnswer === currentQuestion.correctAnswer){ 
+                                                correctCount++;
+                                                 }
+                                                  } alert(`Викторина завершена! Вы ответили правильно на ${correctCount} из ${quiz.length} вопросов.`);
+                                                   } 
+                                                   // Запускаем игру 
+                                                   startQuiz();
+                                                    </script>
+    
+</body>
+</html>
