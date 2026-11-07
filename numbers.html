@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Угадай число</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+
+<body>
+     <div>
+         <h1>Угадай число!</h1>
+          <p id="prompt-text">Я загадала число от 1 до 100. Попробуй угадать.</p>
+           <div class="form">
+             <label for="guessInput">Введите число: </label>
+              <input type="number" id="guessInput" placeholder="Ваше число" min="1" max="100" required>
+             </div> 
+             <button id="checkBtn">Проверить</button>
+              <button id="newGameBtn" class="new-game" style="display: none;">Новая игра</button> 
+              <div class="result" id="result">
+
+              </div>
+             </div>
+              <script> 
+              // Дожидаемся загрузки DOM 
+              document.addEventListener('DOMContentLoaded', function() {
+                 const guessInput = document.getElementById('guessInput'); 
+                 const checkBtn = document.getElementById('checkBtn');
+                  const newGameBtn = document.getElementById('newGameBtn');
+                   const resultEl = document.getElementById('result');
+                    const promptText = document.getElementById('prompt-text');
+
+                     let secretNumber;
+                      let attempts = 0;
+                       function startGame() {
+                         secretNumber = Math.floor(Math.random() * 100) + 1;
+                          attempts = 0;
+
+                           guessInput.value = '';
+                            guessInput.disabled = false;
+                             checkBtn.style.display = 'inline-block';
+                              newGameBtn.style.display = 'none';
+                              
+                              promptText.textContent = 'Я загадала число от 1 до 100. Попробуй угадать.';
+                               resultEl.textContent = '';
+                                guessInput.focus();
+                             }
+                              function checkGuess() { 
+                                const guess = parseInt(guessInput.value, 10); 
+                                if (isNaN(guess) || guess < 1 || guess > 100) { 
+                                    resultEl.textContent = 'Введите число от 1 до 100.'; 
+                                    return;
+                                 } 
+                                 attempts++; 
+                                 if (guess < secretNumber) {
+                                     resultEl.textContent = `Слишком мало! Попробуй больше. Попыток: ${attempts}`;
+                                     } else if (guess > secretNumber) { 
+                                        resultEl.textContent = `Слишком много! Попробуй меньше. Попыток: ${attempts}`;
+                                     } else {
+                                         resultEl.textContent = `Поздравляю! Ты угадал число ${secretNumber} за ${attempts} ${attempts === 1 ? 'попытку' : 'попыток'}.`;
+                                          endGame(); 
+                                        } 
+                                    } 
+                                    function endGame() { 
+                                        guessInput.disabled = true;
+                                         checkBtn.style.display = 'none';
+                                          newGameBtn.style.display = 'inline-block';
+                                           promptText.textContent = 'Игра завершена!';
+                                         } 
+                                         function resetGame() {
+                                             startGame();
+                                             }
+                                              // Назначение событий
+                                               checkBtn.addEventListener('click', checkGuess);
+                                                newGameBtn.addEventListener('click', resetGame); 
+
+                                                // Нажатие Enter в поле ввода
+                                                 guessInput.addEventListener('keydown', function(event) {
+                                                     if (event.key === 'Enter') { 
+                                                        checkGuess();
+                                                     } 
+                                                    });
+                                                     // Запуск первой игры 
+                                                     startGame();
+                                                      });
+                                                       
+</script>
+</body>
+</html>
