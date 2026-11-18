@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Камень, ножницы, бумага</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+</head>
+<body>
+    <h1>Камень, ножницы, бумага</h1>
+    <div id="game">
+        <button id="rock">Камень</button>
+        <button id="paper">Бумага</button>
+        <button id="scissors">Ножницы</button>
+        <div id="result"></div>
+    </div>
+    <script>
+// Массив с вариантами ходов
+const options = ['камень', 'бумага', 'ножницы'];
+
+// Функция для случайного выбора компьютера
+function getComputerChoice() {
+    const randomIndex = Math.floor(Math.random() * options.length);
+    return options[randomIndex];
+}
+
+// Функция для определения победителя
+function determineWinner(playerChoice, computerChoice) {
+    if (playerChoice === computerChoice) {
+        return 'Ничья!';
+    }
+    if (
+        (playerChoice === 'камень' && computerChoice === 'ножницы') ||
+        (playerChoice === 'бумага' && computerChoice === 'камень') ||
+        (playerChoice === 'ножницы' && computerChoice === 'бумага')
+    ) {
+        return 'Вы выиграли!';
+    }
+    return 'Вы проиграли выиграл!';
+}
+
+// Функция для обработки хода игрока
+function playRound(playerChoice) {
+    // Игрок выбрал ход
+    const computerChoice = getComputerChoice();
+
+    // Определяем победителя
+    const result = determineWinner(playerChoice, computerChoice);
+
+    // Обновляем отображаемый результат
+    document.getElementById('result').textContent = result;
+
+    // Здесь можно добавить логику для обновления счёта
+    // Например: updateScore(result === 'Вы выиграли!')
+}
+
+// Обработчик кликов на кнопках
+document.getElementById('rock').addEventListener('click', () => playRound('камень'));
+document.getElementById('paper').addEventListener('click', () => playRound('бумага'));
+document.getElementById('scissors').addEventListener('click', () => playRound('ножницы'));
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
